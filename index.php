@@ -18,5 +18,26 @@
       </tr>
     </table>
     <input type="button" onclick="window.open('info.php');" class="btn" value="View PHP info"></input>
+
+<?php 
+
+$vcap_services = json_decode($_ENV["VCAP_SERVICES"]);
+if($vcap_services->{'compose-for-mysql'}) {
+  $db = @vcap_services->{'compose-for-mysql'}[0]->credentials;
+  }
+  else {
+    echo "Error: No database bound to the application. <br>";
+    die();
+  }
+$mysql_uri = $db->uri;
+
+try {
+  $dbh = new PDO($mysql_uri);
+} catch (PDOException $e) {
+  echo 'Connection failed: ' . $e->getMessage();
+}
+
+?>
+
   </body>
 </html>
