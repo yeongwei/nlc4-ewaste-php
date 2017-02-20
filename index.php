@@ -23,7 +23,7 @@
 
 $vcap_services = json_decode($_ENV["VCAP_SERVICES"]);
 if($vcap_services->{'compose-for-mysql'}) {
-  $db = @vcap_services->{'compose-for-mysql'}[0]->credentials;
+  $db = $vcap_services->{'compose-for-mysql'}[0]->credentials;
   }
   else {
     echo "Error: No database bound to the application. <br>";
