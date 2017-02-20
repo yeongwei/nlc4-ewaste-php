@@ -17,5 +17,6 @@
         </td>
       </tr>
     </table>
+    <input type="button" onclick="window.open('info.php');" class="btn" value="View PHP info"></input>
   </body>
 </html>
