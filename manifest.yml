@@ -1,0 +1,10 @@
+applications:
+- path: .
+  memory: 128M
+  instances: 1
+  domain: au-syd.mybluemix.net
+  name: nlc4-ewaste-php
+  host: nlc4-ewaste-php
+  disk_quota: 1024M
+  services:
+  - Compose-for-MySQL
