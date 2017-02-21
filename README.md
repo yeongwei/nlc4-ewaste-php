@@ -1,1 +1,3 @@
-This README.md file is displayed on your project page.
+# E-Waste Management Application
+
+Making E-Waste recycling fun!
