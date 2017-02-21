@@ -1,9 +1,16 @@
+<?php
+    include("classes/Helper.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>eWaste Management App</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="scripts/jq/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/extend.css" />
+    <link rel="shortcut icon" type="image/png" href="images/persistent-favicon.png"/>
+    <title>eWaste Management App</title>
 </head>
 <body>
     <table>
@@ -35,7 +42,10 @@
             // TODO: Fall back to something useful
             echo "No database bound to the application.";
         }
-        ?>
+        ?><br>
+        PHP Class Test Result: Inspect element will tell you the answer. <?php 
+            $helper = new Helper("Ah-roo!");
+        ?> 
     </td>
     </tr>
     </table>
