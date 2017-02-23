@@ -2,8 +2,11 @@
 
 Making E-Waste recycling fun!
 
-# DB Schema
+# Database Schema
 
+The prototyped schema in JSON:
+
+```json
 [
   '{{repeat(2, 1)}}',
   {
@@ -36,3 +39,4 @@ Making E-Waste recycling fun!
     }
   }
 ]
+```
