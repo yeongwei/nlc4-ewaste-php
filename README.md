@@ -6,7 +6,7 @@ Making E-Waste recycling fun!
 
 The prototyped schema in JSON:
 
-```json
+```
 [
   '{{repeat(2, 1)}}',
   {
