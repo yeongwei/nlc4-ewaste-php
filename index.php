@@ -29,12 +29,17 @@
             $vcap_services = json_decode($_ENV["VCAP_SERVICES"]);
             if (isset($vcap_services->{"compose-for-mysql"})) {
                 $db = $vcap_services->{"compose-for-mysql"}[0]->credentials;
-                $mysql_uri = $db->uri;
-                try {
-                    $dbh = new PDO($mysql_uri);
-                } catch (PDOException $e) {
-                    echo "Connection failed: " . $e->getMessage();
-                }
+                $temp = explode('@',$db->uri);
+                $mysql_cred = explode(':',$temp[0]);
+                $mysql_db = explode('/',$temp[1]);                
+                $mysqli = new mysqli($mysql_db[0],ltrim($mysql_cred[1],"/"),$mysql_cred[2]);
+                    if ($mysqli->connect_error) {
+                        die('Connect Error (' . $mysqli->connect_errno . ') '
+                        . $mysqli->connect_error);
+                    }
+                echo 'Database connected';
+                $mysqli->close();
+                
             } else {
                 echo "Database configurations invalid.";
             }
