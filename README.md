@@ -46,6 +46,7 @@ The prototyped schema in JSON:
 API calls to Watson AlchemyData News to drive data in Awareness page
 
 Counts Query:
+
 https://access.alchemyapi.com/calls/data/GetNews?apikey=APIKEY&start=now-7d&end=now&q.enriched.url.cleanedTitle=e-waste&count=1&outputMode=json&timeSlice=1d
 
 ```
@@ -71,6 +72,7 @@ https://access.alchemyapi.com/calls/data/GetNews?apikey=APIKEY&start=now-7d&end=
 ```
 
 Articles Query:
+
 https://access.alchemyapi.com/calls/data/GetNews?apikey=APIKEY&return=enriched.url.title,enriched.url.url,enriched.url.enrichedTitle.docSentiment&start=now-7d&end=now&q.enriched.url.cleanedTitle=e-waste&count=5&outputMode=json
 
 ```
