@@ -1,7 +1,15 @@
 <?php
 class Helper {
+    private static $developmentServerRootFolder = "/var/www/html";
+    
     public function __construct($txt) {
-        echo "<script type=\"text/javascript\">console.log(\"PHP Class Helper constcution: $txt\")</script>";
+    }
+
+    public static function isDevelopment() {
+        if ($_SERVER["DOCUMENT_ROOT"] == self::$developmentServerRootFolder) 
+            return true;
+        else 
+            return false;
     }
 }
 ?>
