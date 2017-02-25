@@ -29,9 +29,9 @@
 $_id = $_GET['_id'];
 echo '<button type="button" class="location-row" onclick="location.href=\'volunteer-transaction.php?_id=' . $_id . '\'">TRANSACTION</button><br>'
 ?>	
+        <button type="button" class="location-row" onclick="alert('COLLECTION')">COLLECTION</button><br>
         <button type="button" class="location-row" onclick="alert('MODIFY PROMO')">MODIFY PROMO</button><br>
         <button type="button" class="location-row" onclick="alert('STATISTIC')">STATISTIC</button><br>
-        <button type="button" class="location-row" onclick="alert('COLLECTION')">COLLECTION</button><br>
     </div>
     </div>
     <div class="footer">
