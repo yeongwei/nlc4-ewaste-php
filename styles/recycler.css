@@ -7,7 +7,7 @@
      background-color: #ffffff; color: #92d050; }
     .recycler-welcome { position: relative; overflow: hidden; }
     .location-row { position: relative; overflow: hidden; font-weight: bolder; font-size: 22px; color: #ffffff; text-align: center;
-        padding: 10px; border-bottom: 1px solid #31859c; display: block; width: 80%;}
+        padding: 10px; border-bottom: 1px solid #31859c; display: block; width: 80%; margin: auto;}
     /* .location-row:first-child { border-top: 1px solid #ffffff; } */
     .footer { position: absolute; overflow: hidden; width: 100%; bottom: 0px; left: 0px; text-align: center; }
     .footer-text { position: relative; overflow: hidden; font-size: 10px; }
