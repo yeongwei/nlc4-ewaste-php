@@ -16,23 +16,24 @@
         <br>
         <label for="weight">Enter weight of items (in kg)</label>
         <input type="text" name="weight" id="weight">
-        <input type="submit" value="Submit">
+        <br>
+        <input type="submit" value="Submit" class="blue-right-btn">
     </form>
     <br>
     <div id="volunteer-status">
-        Current List
+        <h3>Current List</h3>
         <hr>
-        Status: <span id="volunteer-status"></span>
+        <p>Status: </p><span id="volunteer-status"></span>
         <hr>
         <div id="output">
-        <table>
+        <table class="volunteer-status">
         <tr>
             <th>Action</th><th>Record Number</th><th>Weight (kg)</th><th>Date of Transaction</th>
         </tr>
         <tr>
             <td>
                 <img src="images/edit_icon.png" alt="edit" style="width:10px;height:10px;">|
-                <img src="images/edit_icon.png" alt="edit" style="width:10px;height:10px;">
+                <img src="images/delete_icon.png" alt="edit" style="width:10px;height:10px;">
             </td>
             <td>
                 KR-1
@@ -44,13 +45,11 @@
                 24/02/2017 12:00PM
             </td>
         </tr>
-        <tr><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr>
-        <tr>
-        <td>Total Current Weight</td><td></td><td></td><td id="transaction-ttl-weight"></td>
-        </tr>
         </table>
+        <hr>
+        <p>Total Current Weight</p><span id="transaction-ttl-weight"></span>
         </div>
-        <br><button type="button" onclick="alert('View History')">View History</button><br>
+        <br><button type="button" onclick="alert('View History')" class="blue-right-btn">View History</button><br>
     </div>
     <footer class="footer">
         <p style="color: black;">
