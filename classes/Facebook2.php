@@ -70,10 +70,15 @@ class Facebook2 {
         return $this->fbOAuth2Client->debugToken($this->getAccessToken());
     }
 
+    private function isTokenStillValid() {
+        if ($this->getAccessTokenMetaData()->getIsValid()) return true;
+        else return false;
+    }
+
     private function isTokenValid() {
         try {
-            $this->getAccessTokenMetaData()->validateAppId(self::getFbAppId());
-            return true;
+            // $this->getAccessTokenMetaData()->validateAppId(self::getFbAppId());
+            return $this->isTokenStillValid();
         } catch (Exception $ex) {
             echo $ex->getMessage() . "<br>";
             return false;
