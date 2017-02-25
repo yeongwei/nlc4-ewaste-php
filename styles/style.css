@@ -74,6 +74,14 @@ th, td {
     padding: 2px 20px;
 }
 
+table.volunteer-status {
+    table-layout: fixed;
+    width: 100%;
+    margin: 0 auto;
+    word-wrap: break-word;
+    padding-top:0px;
+}
+
 table.volunteer-listing {
     table-layout: fixed;
     border: 1px solid black;
@@ -149,6 +157,13 @@ h2.title {
     text-align: center
 }
 
+h3.title {
+    width: 100%;
+    color: black;
+    background-color: white;
+    text-align: center
+}
+
 h3.desc {
     width: 100%;
     color: grey;
@@ -183,3 +198,10 @@ div.welcome button {
     color: white;
 }
 
+.blue-right-btn {
+    margin: -0px;
+    display: inline-block;
+    background-color: #31859c;
+    text-align: center;
+    color: white;
+}
