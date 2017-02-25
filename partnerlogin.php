@@ -8,8 +8,8 @@
 <head>
     <?php include("views/common.php"); ?>
 
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/donor.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/style.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/partnerlogin.css" />
     <link rel="shortcut icon" type="image/png" href="images/persistent-favicon.png"/>
     <title>e-Cycle</title>
 </head>
@@ -20,18 +20,21 @@
         </div>
         <div class="title-desc">Sign-In Page</div>
 <?php 
-$error = $_GET['error'];
-if ($error == "true")
+    $error = @$_GET['error'];
+    if ($error == "true")
 	echo "<h2> user not found </h2>"
 ?>        
         <div class="location-list">
         <?php
         ?>
         <form action="login_action.php" id="recycler-city">
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email">
-        <br>     
-        <input type="submit" id="submitBtn">
+        <label class="email" for="email">Fill in you Email and Click Submit</label>
+        <div class="input-container">
+            <input class="input" type="text" name="email" id="email">
+        </div>
+        <div class="submit-container">     
+            <input type="submit" id="submitBtn">
+        </div>
         </form>
         </div>
     </div>

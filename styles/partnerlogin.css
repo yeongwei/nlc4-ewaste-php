@@ -1,0 +1,29 @@
+@media (min-width: 1px) {
+    body, html { background-color: #92D050; }
+    .main-container { position: relative; width: 100%; overflow: hidden; }
+    .header-image { position: relative; width: 100%; overflow: hidden; }
+    .header-image img { position: relative; width: 100%; height: 40px; }
+    .title-desc { position: relative; oveflow: hidden; text-align: center; font-weight: bolder; font-size: 28px; margin-bottom: 5px; 
+     background-color: #ffffff; color: #92d050; }
+    .location-list { position: relative; overflow: hidden; }
+    .location-row { position: relative; overflow: hidden; font-weight: bolder; font-size: 22px; color: #ffffff; text-align: center;
+        padding: 10px; border-bottom: 1px solid #ffffff; display: block; }
+    /* .location-row:first-child { border-top: 1px solid #ffffff; } */
+    .footer { position: absolute; overflow: hidden; width: 100%; bottom: 0px; left: 0px; text-align: center; }
+    .footer-text { position: relative; overflow: hidden; font-size: 10px; }
+    .footer-image { position: relative; }
+    .footer-image img { height: 40px; }
+
+    #recycler-city { position: relative; overflow: hidden; display: block; width: 100%; }
+    #recycler-city .email { position: relative; overflow: hidden; widthL 100%; display: block; text-align: center; padding-top: 10px; 
+        padding-bottom: 10px; font-size: 20px; color: #ffffff; font-weight: bolder; }
+    #recycler-city .input { position: relative; overflow: hidden; width: calc(100% - 24px); margin-left: 10px; border: none; 
+        font-size: 24px; padding: 2px; margin-bottom: 10px; } 
+    #recycler-city .submit-container { position: relative; overflow: hidden; text-align: center; }
+    #recycler-city .submit-container input { position: relative; overflow: hidden; width: 100px; font-size: 20px; 
+        background-color: #ffffff; color: #92D050; border: none; text-align: center; }
+}
+@media (min-width: 480px) {}
+@media (min-width: 768px) { body, html { background-color: #92D050; } }
+@media (min-width: 1280px) { body, html { background-color: #185e12; } }
+@media (min-width: 1440px) {}
