@@ -7,11 +7,17 @@
     .splash-details { position: absolute; top: 10px; left: 10px; }
     .splash-details-title { position: relative; overflow: hidden; font-weight: bolder; font-size: 14px; }
     .splash-details-desc { position: relative; overflow: hidden; font-style: italic; font-size: 10px; margin-bottom: 5px; }
+
     .navigation-container { position: relative; overflow: hidden; text-align: center; }
     .naivgation-list { position: relative; overflow: hidden; }
-    .navigation-header { position: relative; overflow: hidden; font-weight: bolder; font-size: 20px; padding-top: 15px; padding-bottom: 15px; background-color: #31859c; }
-    .navigation-option { position: relative; overflow: hidden; padding-top: 8px; padding-bottom: 12px; display: none; background-color: white;}
-    .navigation-option a { font-size: 14px; color: black; }
+    .navigation-header { position: relative; overflow: hidden; font-weight: bolder; font-size: 20px; padding-top: 15px; padding-bottom: 15px; 
+        border-top: 1px solid #ffffff; }
+    .naivgation-list:first-child .navigation-header { border-top: none; }
+    .navigation-option { position: relative; overflow: hidden; padding-top: 8px; padding-bottom: 12px; display: none;
+        margin-left: 10px; margin-right: 10px; border-top: 1px solid #ffffff; }
+    .navigation-option:last-child { border-bottom: none; }
+    .navigation-option a { font-size: 14px; color: #ffffff; font-weight: bolder; }
+
     .footer { position: absolute; overflow: hidden; width: 100%; bottom: 0px; left: 0px; text-align: center; }
     .footer-text { position: relative; overflow: hidden; font-size: 10px; color: black;}
     .footer-image { position: relative; }
