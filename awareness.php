@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>E-waste Analytics</title>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script type="text/javascript" src="scripts/canvas/canvasjs.min.js"></script>
+        <script type="text/javascript" src="scripts/jq/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="scripts/script.js"></script>
+        <link rel="shortcut icon" type="image/png" href="images/persistent-favicon.png"/>
+        <title>e-Cycle</title>
     </head>
 
     <?php
