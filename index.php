@@ -13,52 +13,45 @@
     <title>eWaste Management App</title>
 </head>
 <body>
-    <table>
-    <tr>
-    <td style="width: 30%;">
-    <img class = "newappIcon" src="images/newapp-icon.png">
-    </td>
-    <td>
-        <h1 id = "message"><?php echo "Welcome to eWaste Management App"; ?></h1>
-        A better way to dispose <span class="blue">eWaste</span>.<br>
-        Click <a href="info.php" target="_blank">here</a> to view PHP Info.<br>
-        Database Status: <?php
-        if (isset($_ENV["VCAP_SERVICES"])) { ?>
-        <script type="text/javascript">console.log(<?php echo $_ENV["VCAP_SERVICES"]; ?>)</script>"
-        <?php
-            $vcap_services = json_decode($_ENV["VCAP_SERVICES"]);
-            if (isset($vcap_services->{"compose-for-mysql"})) {
-                $db = $vcap_services->{"compose-for-mysql"}[0]->credentials;
-                $temp = explode('@',$db->uri);
-                $mysql_cred = explode(':',$temp[0]);
-                $mysql_db = explode('/',$temp[1]);                
-                $mysqli = new mysqli($mysql_db[0],ltrim($mysql_cred[1],"/"),$mysql_cred[2]);
-                    if ($mysqli->connect_error) {
-                        die('Connect Error (' . $mysqli->connect_errno . ') '
-                        . $mysqli->connect_error);
-                    }
-                echo 'Database connected';
-                $mysqli->close();
-                
+    <img src="../../images/E-WasteTree.jpg" alt="E-WasteTree">
+    <div class="statements">
+        <p><strong>Our Mission</strong></p>
+        <p><i>Mission statement</i></p>
+        <p><strong>Our Goals</strong></p>
+        <p><i>Goals statement</i></p>
+    </div>
+    <button class="accordion">FIND US</button>
+    <div class="panel">
+      <p>MERCHANT LOCATOR</p>
+    </div>
+    <button class="accordion">PARTNER WITH US</button>
+    <div class="panel">
+      <p>REGISTRATION</p>
+      <p>PARTNER LOGIN</p>
+    </div>
+    <script type="text/javascript">
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
             } else {
-                echo "Database configurations invalid.";
+                panel.style.display = "block";
             }
-        } else {	
-            // TODO: Fall back to something useful
-            echo "No database bound to the application.";
         }
-        ?><br>
-        PHP Class Test Result: Inspect element will tell you the answer. <?php 
-            $helper = new Helper("Ah-roo!");
-        ?> 
-    </td>
-    </tr>
-    </table>
-    <div
-       class="fb-like"
-       data-share="true"
-       data-width="450"
-       data-show-faces="true">
+    }
+    </script>
+    <div class="footer">
+      <p style="color:black;"><em>Powered by</em></p>
+      <img src="../../images/logo1.png" alt="logo" style="width:80px;height:40px;">
     </div>
 </body>
 </html>
