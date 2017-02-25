@@ -59,16 +59,10 @@ h1 {
 
 table {
     table-layout: fixed;
-    border: 1px solid black;
     width: 800px;
     margin: 0 auto;
     word-wrap: break-word;
     padding-top:10%;
-}
-
-br.table {
-   display: block;
-   margin: 1px 0;
 }
 
 th {
@@ -76,6 +70,20 @@ th {
 }
 
 th, td {
+    text-align: left;
+    padding: 2px 20px;
+}
+
+table.volunteer-listing {
+    table-layout: fixed;
+    border: 1px solid black;
+    width: 800px;
+    margin: 0 auto;
+    word-wrap: break-word;
+    padding-top:10%;
+}
+
+table.volunteer-listing th, table.volunteer-listing td {
     text-align: left;
     border: 1px solid black;    
     width: auto;
@@ -148,7 +156,7 @@ h3.desc {
     text-align: center
 }
 
-form#registration, form#addrecords {
+form#registration, form#addrecords, div#volunteer-status {
     color: black;
     background-color: white;
 }
