@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="footer">
-            <div class="footer-text">Powdered by</div>
+            <div class="footer-text">Powered by</div>
             <div class="footer-image">
                 <a href="index.php"><img class="" src="<?php echo BASE_URL; ?>images/logo1.png"/></a>
             </div>
