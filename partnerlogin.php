@@ -19,13 +19,20 @@
             <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
         </div>
         <div class="title-desc">Sign-In Page</div>
+<?php 
+$error = $_GET['error'];
+if ($error == "true")
+	echo "<h2> user not found </h2>"
+?>        
         <div class="location-list">
         <?php
         ?>
+        <form action="login_action.php" id="recycler-city">
         <label for="email">Email</label>
         <input type="text" name="email" id="email">
         <br>     
         <input type="submit" id="submitBtn">
+        </form>form>
         </div>
     </div>
     <div class="footer">
