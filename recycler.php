@@ -21,14 +21,11 @@
     </div>
     <div class="title-desc">Welcome Recycler</div>
     <br>
-    <div class="recycler-welcome">
-<?php
-$_id = $_GET['_id'];
-echo '<button type="button" class="location-row" onclick="location.href=\'recycler-merchant-status.php?_id=' . $_id . '\'">COLLECTION</button><br>'
-?>        
-        <!-- history and collections is the same <button type="button" class="location-row" onclick="alert('HISTORY')">HISTORY</button><br>-->
-        <button type="button" class="location-row" onclick="alert('WEIGHT CHECK')">WEIGHT CHECK</button><br>
-        <button type="button" class="location-row" onclick="alert('STATISTICS')">STATISTICS</button><br>
+    <div class="recycler-welcome">       
+        <a href="<?php echo BASE_URL; ?>collection.php" class="location-row">COLLECTION</a>
+        <!-- history and collections is the same <a href="#" class="location-row">HISTORY</a>-->
+        <a href="<?php echo BASE_URL; ?>recycler-merchant-status.php?_id=<?php echo @$_GET["_id"]; ?>" class="location-row">WEIGHT CHECK</a>
+        <a href="#" class="location-row">STATISTICS</a>
     </div>
     </div>
     <div class="footer">
