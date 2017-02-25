@@ -192,7 +192,7 @@ div.welcome button {
 }
 
 .blue-right-btn {
-    float: right;
+    margin: -0px;
     display: inline-block;
     background-color: #31859c;
     text-align: center;
