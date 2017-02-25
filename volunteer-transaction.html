@@ -10,10 +10,26 @@
     <title>eWaste Management App</title>
 </head>
 <body>
-    <div id="addrecords">
+    <form action="/add_records.php" id="addrecords">
         <h3>Add New Records</h3>
         <hr>
-        
+        <br>
+        <label for="weight">Enter weight of items (in kg)</label>
+        <input type="text" name="weight" id="weight">
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <div>
+        Current List
+        <hr>
+        Status: <span id="volunteer-status"></span>
+        <hr>
+        <table>
+        <tr>
+            <th>Action</th><th>Record Number</th><th>Weight (kg)</th><th>Date of Transaction</th>
+            
+        </tr>
+        </table>
     </div>
 </body>
 </html>
