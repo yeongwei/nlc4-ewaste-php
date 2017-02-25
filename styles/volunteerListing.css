@@ -1,0 +1,29 @@
+@media (min-width: 1px) {
+    body, html { background-color: #ffffff; }
+    .main-container { position: relative; width: 100%; overflow: hidden; }
+    .header-image { position: relative; width: 100%; overflow: hidden; }
+    .header-image img { position: relative; width: 100%; height: 40px; }
+    .title-desc { position: relative; oveflow: hidden; text-align: center; font-weight: bolder; font-size: 28px; margin-bottom: 5px; 
+     background-color: #ffffff; color: #92d050; }
+    .location-list { position: relative; overflow: hidden; }
+    .location-row { position: relative; overflow: hidden; font-weight: bolder; font-size: 10px; color: #92D050;
+        padding: 10px; border-bottom: 1px solid #92D050; display: block; }
+    .location-row:first-child { border-top: 1px solid #92D050; }
+     .location-logo { position: relative; overflow: hidden; float: left; width: 30% }
+     .location-details { position: relative; overflow: hidden; float: left; width: 70% }
+     .location-text { position: relative; overflow: hidden; }
+     .location-text.company { font-size: 18px; font-weight: bolder; }
+     .location-text.desc { font-size: 12px; }
+     .location-text.distance { font-size: 14px; margin-top : 10px; }
+     .location-text.promo { position: absolute; overflow: hidden; right: 0px; bottom: 0px; } 
+
+    /* .location-row:first-child { border-top: 1px solid #ffffff; } */
+    .footer { position: fixed; overflow: hidden; width: 100%; bottom: 0px; left: 0px; text-align: center; background-color: #92D050; padding-top: 10px; }
+    .footer-text { position: relative; overflow: hidden; font-size: 10px; }
+    .footer-image { position: relative; }
+    .footer-image img { height: 40px; }
+}
+@media (min-width: 480px) {}
+@media (min-width: 768px) { body, html { background-color: #92D050; } }
+@media (min-width: 1280px) { body, html { background-color: #185e12; } }
+@media (min-width: 1440px) {}
