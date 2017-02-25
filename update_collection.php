@@ -13,7 +13,7 @@ $mysqli = new mysqli ( $mysql_db [0], ltrim ( $mysql_cred [1], "/" ), $mysql_cre
 if ($mysqli->connect_error) {
 	die ( "Connection failed: " . $mysqli->connect_error );
 }
-$recycler_id = $_GET['_id'];
+$recycler_id = $_GET['recycler_id'];
 $volunteer_id = $_GET['volunteer_id'];
 
 $sql = "update ewaste_trx set recycler_id = " . $recycler_id ." , status = 'requested'
