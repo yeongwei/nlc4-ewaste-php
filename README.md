@@ -122,6 +122,11 @@ create table ewaste_promo
    primary key(_id) 
 )
 ```
+
+## JDBC URL
+
+jdbc:mysql://bluemix-sandbox-dal-9-portal.5.dblayer.com:23310/compose
+
 # API
 
 API calls to Watson AlchemyData News to drive data in Awareness page
