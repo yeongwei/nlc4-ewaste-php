@@ -9,6 +9,7 @@
     <?php include("views/common.php"); ?>
 
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/style.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/recycler.css" />
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/index.css" />
     <link rel="shortcut icon" type="image/png" href="<?php echo BASE_URL; ?>images/persistent-favicon.png"/>
     <title>eWaste Management App</title>
@@ -19,14 +20,14 @@
         <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
     </div>
     <div class="title-desc">Welcome Recycler</div>
-    <div class="welcome">
+    <div class="recycler-welcome">
 <?php
 $_id = $_GET['_id'];
 echo '<button type="button" onclick="location.href=\'recycler-merchant-status.php?_id=' . $_id . '\'">COLLECTION</button><br>'
 ?>	    
-        <button type="button" onclick="alert('STATISTICS')">STATISTICS</button><br>
-        <button type="button" onclick="alert('HISTORY')">HISTORY</button><br>
-        <button type="button" onclick="alert('WEIGHT CHECK')">WEIGHT CHECK</button><br>
+        <button type="button" class="location-row" onclick="alert('STATISTICS')">STATISTICS</button><br>
+        <button type="button" class="location-row" onclick="alert('HISTORY')">HISTORY</button><br>
+        <button type="button" class="location-row" onclick="alert('WEIGHT CHECK')">WEIGHT CHECK</button><br>
     </div>
     </div>
     <div class="footer">
