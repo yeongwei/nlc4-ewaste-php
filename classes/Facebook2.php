@@ -48,7 +48,7 @@ class Facebook2 {
      */
     protected function handleRedirect() {
         if ($this->isTokenValid()) {
-            $this->getLongLivedAccessToken();
+            // $this->getLongLivedAccessToken();
             return true;
         } else return false;
     }
