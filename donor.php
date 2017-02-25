@@ -45,7 +45,7 @@
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
         ?>
-            <a href="#" class="location-row"><?php echo $row["city"]; ?></a>
+            <a href="<?php echo BASE_URL; ?>volunteerListing.php?city=<?php echo $row["city"]; ?>" class="location-row"><?php echo $row["city"]; ?></a>
         <?php 
             }
         }
