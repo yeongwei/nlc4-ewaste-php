@@ -12,6 +12,7 @@
     <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/index.js"></script>
 
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/style.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/recycler-merchant-status.css" />
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/index.css" />
     <link rel="shortcut icon" type="image/png" href="<?php echo BASE_URL; ?>images/persistent-favicon.png"/>
     <title>eWaste Management App</title>

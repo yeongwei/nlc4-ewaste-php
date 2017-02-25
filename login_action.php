@@ -18,24 +18,26 @@ $email = $_GET['email'];
 $sql = "select _role, _id from ewaste_user where email = '" . $email . "' limit 1";
 $result = $mysqli->query($sql);
 $role = "unknown" ;
+$_id = 0 ;
 
 
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
-		$role = $row["_role"]; 
+		$role = $row["_role"];
+		$_id = $row["_id"];
 	}
 }
+
+$mysqli->close ();
 
 if($role == "donor")
 	header("Location: /donor.php");
 elseif($role == "recycler")
-	header("Location: /recycler.php?_id=" . $row["_id"]);
+	header("Location: /recycler.php?_id=" . $_id);
 elseif($role == "volunteer")
-	header("Location: /volunteer.php?_id=" . $row["_id"]);
+	header("Location: /volunteer.php?_id=" . $_id);
 else
 	header("Location: /partnerlogin.php?error=true");
 	
-$mysqli->close ();
 
-header("Location: /volunteer-transaction.php");
 ?>

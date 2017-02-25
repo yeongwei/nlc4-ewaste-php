@@ -32,7 +32,7 @@ if ($error == "true")
         <input type="text" name="email" id="email">
         <br>     
         <input type="submit" id="submitBtn">
-        </form>form>
+        </form>
         </div>
     </div>
     <div class="footer">
