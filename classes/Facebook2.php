@@ -1,7 +1,10 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . 
-    "/nlc4-ewaste-php/classes/facebook/php-graph-sdk-5.0.0/src/Facebook/autoload.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/nlc4-ewaste-php/classes/Helper.php";
+define("PROJECT_FOLDER", "/"); // TODO: Production would be / instead
+
+require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_FOLDER .
+    "classes/facebook/php-graph-sdk-5.0.0/src/Facebook/autoload.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_FOLDER .
+    "nlc4-ewaste-php/classes/Helper.php";
 
 use Facebook\Facebook;
 
