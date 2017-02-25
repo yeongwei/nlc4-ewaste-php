@@ -12,7 +12,7 @@
 <body>
     <img src="images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
     <h2 class="title">Find Your Nearest Collection Point</h2>
-    <form action="action_page.php" id="registration">
+    <form action="volunteerListing.php" id="registration">
         <div id="label_input">
             <h3>Pick a City</h3>
             <hr>   
@@ -40,7 +40,7 @@ $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo "<option value=" . $row["city"]. ">" . $row["city"]. "</option>";
+        echo '<option value="' . $row['city']. '">' . $row['city']. '</option>';
     }
 }
 $mysqli->close ();
