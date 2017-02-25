@@ -10,10 +10,52 @@
     <title>eWaste Management App</title>
 </head>
 <body>
-    <div id="addrecords">
+    <form action="/add_records.php" id="addrecords">
         <h3>Add New Records</h3>
         <hr>
-        
+        <br>
+        <label for="weight">Enter weight of items (in kg)</label>
+        <input type="text" name="weight" id="weight">
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <div>
+        Current List
+        <hr>
+        Status: <span id="volunteer-status"></span>
+        <hr>
+        <div id="output">
+        <table>
+        <tr>
+            <th>Action</th><th>Record Number</th><th>Weight (kg)</th><th>Date of Transaction</th>
+            <td>
+                <img src="images/edit_icon.png" alt="edit" style="width:10px;height:10px;">|
+                <img src="images/edit_icon.png" alt="edit" style="width:10px;height:10px;">
+            </td>
+            <td>
+                KR-1
+            </td>
+            <td>
+                0.56
+            </td>
+            <td>
+                24/02/2017 12:00PM
+            </td>
+        </tr>
+        <tr><td><hr></td></tr>
+        <tr>
+        <td>Total Current Weight</td><td id="transaction-ttl-weight"></td>
+        </tr>
+        </table>
+        </div>
+        <br><button type="button" onclick="alert('View History')">View History</button><br>
     </div>
+    <footer class="footer">
+        <p style="color: black;">
+            <em>Powered by</em>
+        </p>
+        <img src="images/logo1.png" alt="logo"
+            style="width: 80px; height: 40px;">
+    </footer>
 </body>
 </html>
