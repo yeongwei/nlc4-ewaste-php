@@ -30,7 +30,7 @@
         <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
     </div>
     <div class="title-desc">Merchant Weight Status</div>
-    <div id="merchant-status">
+    <div class="merchant-status">
     <form action="recycler-merchant-status.php" id="recycler-city">
         <div id="label_input">  
             <label for="city">City</label> 
@@ -69,7 +69,7 @@ $mysqli->close ();
 $_id = $_GET['_id'];
 echo '<input type="hidden" name="_id" id="_id" value="' . $_id . '">'
 ?>            
-        <input type="submit" value="Submit" class="blue-right-btn">
+        <!--<input type="submit" value="Submit" class="blue-right-btn">  -->
     </form>
     <hr>
     <br>
