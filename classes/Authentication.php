@@ -49,7 +49,7 @@ class Authentication extends Facebook2 {
         if (Helper::isDevelopment())
             return "http://www.foo.com:" . $_SERVER["SERVER_PORT"] . $defaultRedirectUri;
         else
-            return "http://" . $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $defaultRedirectUri;
+            return "https://" . $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $defaultRedirectUri;
     }
 }
 ?>
