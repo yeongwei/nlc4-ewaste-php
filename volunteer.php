@@ -11,6 +11,7 @@
     <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/index.js"></script>
 
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/style.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/volunteer.css" />
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/index.css" />
     <link rel="shortcut icon" type="image/png" href="<?php echo BASE_URL; ?>images/persistent-favicon.png"/>
     <title>eWaste Management App</title>
@@ -21,15 +22,15 @@
         <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
     </div>
     <div class="title-desc">Welcome Merchant</div>
-    <div class="welcome-merchant">
+    <div class="volunteer-welcome">
     
 <?php
 $_id = $_GET['_id'];
-echo '<button type="button" onclick="location.href=\'volunteer-transaction.php?_id=' . $_id . '\'">TRANSACTION</button><br>'
+echo '<button type="button" class="location-row" onclick="location.href=\'volunteer-transaction.php?_id=' . $_id . '\'">TRANSACTION</button><br>'
 ?>	
-        <button type="button" onclick="alert('MODIFY PROMO')">MODIFY PROMO</button><br>
-        <button type="button" onclick="alert('STATISTIC')">STATISTIC</button><br>
-        <button type="button" onclick="alert('COLLECTION')">COLLECTION</button><br>
+        <button type="button" class="location-row" onclick="alert('MODIFY PROMO')">MODIFY PROMO</button><br>
+        <button type="button" class="location-row" onclick="alert('STATISTIC')">STATISTIC</button><br>
+        <button type="button" class="location-row" onclick="alert('COLLECTION')">COLLECTION</button><br>
     </div>
     </div>
     <div class="footer">
