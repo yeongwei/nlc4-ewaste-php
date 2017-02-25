@@ -40,7 +40,7 @@
         // Check DB connection
         if ($mysqli->connect_error) die("Connection failed: " . $mysqli->connect_error );
 
-        $sql = "select company, company_desc, image_path, promo.promo_count as promo_count 
+        $sql = "select _id, company, company_desc, image_path, promo.promo_count as promo_count 
                 from ewaste_user usr left outer join (
                 select count(1) promo_count , volunteer_id from 
                 ewaste_promo where status = true and start_date < current_timestamp() and current_timestamp() <= expiry_date group by volunteer_id) promo 
@@ -50,7 +50,7 @@
         if ($result->num_rows > 0) {
             while   ($row = $result->fetch_assoc()) {
     ?>
-        <a href="#" class="location-row">
+        <a href="<?php echo BASE_URL; ?>merchant-promo.php?id=<?php echo $row["_id"]; ?>" class="location-row">
             <div class="location-logo"><img src="<?php echo $row["image_path"]; ?>" alt="<?php echo $row["company"]; ?>"/></div>
             <div class="location-details">
                 <div class="location-text company"><?php echo $row["company"]; ?></div>
