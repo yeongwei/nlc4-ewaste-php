@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="styles/extend.css" />
     <link rel="shortcut icon" type="image/png" href="images/persistent-favicon.png"/>
     <title>eWaste Management App</title>
-    <script>
+    <!-- script>
     function updateMerchantStats() {
         var x = document.getElementById("city").value;
         document.getElementById("ttl-merchant").innerHTML = "2"; /*put total machants found here*/
         /* document.getelementbyclass("volunteer-status").*  change the table contents here*/
     }
-    </script>
+    </script-->
 </head>
 <body>
     <header>
@@ -25,7 +25,8 @@
     <form action="recycler-merchant-status.php" id="recycler-city">
         <div id="label_input">  
             <label for="city">City</label> 
-            <select name="city" id="city" onchange="updateMerchantStats()">
+            <select name="city" id="city">
+            <input type="submit" value="Submit" class="blue-right-btn">
 <?php
 // Read MySQL credentials from VCAP services and formatting
 $vcap_services = json_decode ( $_ENV ["VCAP_SERVICES"] );
