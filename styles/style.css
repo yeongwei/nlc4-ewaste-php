@@ -74,7 +74,7 @@ th, td {
     padding: 2px 20px;
 }
 
-table.volunteer-status {
+table.volunteer-status, table.collection-status, table.collection-history {
     table-layout: fixed;
     width: 100%;
     margin: 0 auto;
