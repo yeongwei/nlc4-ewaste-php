@@ -37,6 +37,7 @@ class Authentication extends Facebook2 {
             echo "Success!!!";
         } else {
             $this->logout();
+            echo "Failure!!!";
             // header("Location: " . urlencode(self::$defaultLoginUri . "?error with remote authentication"));
         }
     }
