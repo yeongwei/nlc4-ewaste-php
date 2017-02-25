@@ -28,9 +28,9 @@
         <br>
         <input type="submit" id="submitBtn">
     </form>
-    <div class="footer">
+    <footer class="footer">
       <p style="color:black;"><em>Powered by</em></p>
       <img src="images/logo1.png" alt="logo" style="width:80px;height:40px;">
-    </div>
+    </footer>
 </body>
 </html>
