@@ -1,12 +1,5 @@
 <?php
 
-function prompt($prompt_msg){
-	echo("<script type='text/javascript'> var answer = prompt('".$prompt_msg."'); </script>");
-
-	$answer = "<script type='text/javascript'> document.write(answer); </script>";
-	return($answer);
-}
-
 $vcap_services = json_decode ( $_ENV ["VCAP_SERVICES"] );
 $db = $vcap_services->{"compose-for-mysql"} [0]->credentials;
 $temp = explode ( '@', $db->uri );
@@ -34,12 +27,9 @@ if ($result->num_rows > 0) {
 		$donor_id = $row["_id"]; 
 	}
 }
-prompt ($donor_id);
 
 $sql = "insert into ewaste_trx (donor_id,volunteer_id,recycler_id,weight,trx_date,status) 
 		values (" . $donor_id .", " . $_id .", null, " . $weight . ", CURRENT_TIMESTAMP(), 'available' )";
-
-prompt ($sql);
 
 
 if ($mysqli->query($sql) === TRUE) {
