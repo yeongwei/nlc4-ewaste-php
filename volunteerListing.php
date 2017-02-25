@@ -84,19 +84,19 @@ $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo "<tr>"//"<option value=" . $row["city"]. ">" . $row["city"]. "</option>";
-		echo '<td><img src="' . $row["image_path"] . '" alt="' . $row["company"] .'"></td>'
-		echo '<td><h2 class="title">' . $row["company"] . '</h2>'
-    	echo '<hr style="height:1pt; visibility:hidden;" />'	
-		echo '<h3 class="desc">' . $row["company_desc"] . '</h3>'
-		echo '<hr style="height:1pt; visibility:hidden;" />'
-		echo 'Distance: 2 km'
-		echo '</td>'
+        echo "<tr>";    //"<option value=" . $row["city"]. ">" . $row["city"]. "</option>";
+		echo '<td><img src="' . $row["image_path"] . '" alt="' . $row["company"] .'"></td>';
+		echo '<td><h2 class="title">' . $row["company"] . '</h2>';
+    	echo '<hr style="height:1pt; visibility:hidden;" />';	
+		echo '<h3 class="desc">' . $row["company_desc"] . '</h3>';
+		echo '<hr style="height:1pt; visibility:hidden;" />';
+		echo 'Distance: 2 km';
+		echo '</td>';
         if ($row["promo_count"] > 0)
-        	echo '<td><img src="images/specialOffer.png" alt="specialOffer"></td>'
+        	echo '<td><img src="images/specialOffer.png" alt="specialOffer"></td>';
         else 
-        	echo '<td/>'
-		echo "</tr>"			
+        	echo '<td/>';
+		echo "</tr>";			
     		
     }
 }
