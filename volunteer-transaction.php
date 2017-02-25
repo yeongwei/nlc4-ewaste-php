@@ -21,6 +21,9 @@
         <label for="weight">Enter weight of items (in kg)</label>
         <input type="text" name="weight" id="weight">
         <br>
+        <label for="weight">Donor Name ( leave null for anonymous)</label>
+        <input type="text" name="donor" id="donor">
+        <br>        
         <input type="submit" value="Submit" class="blue-right-btn">
         <br>
     </form>
