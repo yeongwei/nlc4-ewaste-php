@@ -15,6 +15,7 @@ if ($mysqli->connect_error) {
 }
 $recycler_id = $_GET['recycler_id'];
 $volunteer_id = $_GET['volunteer_id'];
+$city = $_GET['city'];
 
 $sql = "update ewaste_trx set recycler_id = " . $recycler_id ." , status = 'requested'
 		where volunteer_id = " . $volunteer_id ." and status = 'available'" ;
@@ -28,5 +29,5 @@ if ($mysqli->query($sql) === TRUE) {
 
 $mysqli->close ();
 
-header("Location: /recycler-merchant-status.php");
+header("Location: /recycler-merchant-status.php?_id=" . $recycler_id . "&city=" . $city);
 ?>
