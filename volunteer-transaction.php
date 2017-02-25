@@ -57,7 +57,7 @@ $mysqli = new mysqli ( $mysql_db [0], ltrim ( $mysql_cred [1], "/" ), $mysql_cre
 if ($mysqli->connect_error) {
 	die ( "Connection failed: " . $mysqli->connect_error );
 }
-$sql = "select _id, weight, trx_date from ewaste_trx where volunteer_id=" . $_id;
+$sql = "select _id, weight, trx_date from ewaste_trx where status = 'available' and volunteer_id=" . $_id;
 $result = $mysqli->query($sql);
 $donor_id = 0 ;
 
