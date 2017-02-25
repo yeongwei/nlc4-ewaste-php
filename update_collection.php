@@ -17,7 +17,7 @@ $recycler_id = $_GET['_id'];
 $volunteer_id = $_GET['volunteer_id'];
 
 $sql = "update ewaste_trx set recycler_id = " . $recycler_id ." , status = 'requested'
-		where donor_id = " . $donor_id ." and status = 'available'" ;
+		where volunteer_id = " . $volunteer_id ." and status = 'available'" ;
 
 
 if ($mysqli->query($sql) === TRUE) {
