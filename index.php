@@ -18,8 +18,8 @@
 <body>
     <div class="main-container">
         <div class="splash-container">
-            <img class="splash-image" 
-                src="<?php echo BASE_URL; ?>images/E-WasteTree.jpg" alt="E-WasteTree">
+            <a href="awareness.php"><img class="splash-image" 
+                src="<?php echo BASE_URL; ?>images/E-WasteTree.jpg" alt="E-WasteTree"></a>
             <div class="splash-details">
                 <div class="splash-details-title">Our Mission</div>
                 <div class="splash-details-desc">Mission statement of the Year!</div>
