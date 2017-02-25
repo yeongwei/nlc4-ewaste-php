@@ -12,7 +12,6 @@
 
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/style.css" />
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/volunteer.css" />
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/index.css" />
     <link rel="shortcut icon" type="image/png" href="<?php echo BASE_URL; ?>images/persistent-favicon.png"/>
     <title>eWaste Management App</title>
 </head>
@@ -24,16 +23,13 @@
     <div class="title-desc">Welcome Merchant</div>
     <br>
     <div class="volunteer-welcome">
+        <a href="<?php echo BASE_URL; ?>volunteer-transaction.php?_id=<?php echo @$_GET["_id"]; ?>" class="location-row">TRANSACTION</a>
+        <a href="#" class="location-row">COLLECTION</a>
+        <a href="#" class="location-row">MODIFY PROMO</a>
+        <a href="#" class="location-row">STATISTIC</a>
+    </div>
+    </div>
     
-<?php
-$_id = $_GET['_id'];
-echo '<button type="button" class="location-row" onclick="location.href=\'volunteer-transaction.php?_id=' . $_id . '\'">TRANSACTION</button><br>'
-?>	
-        <button type="button" class="location-row" onclick="alert('COLLECTION')">COLLECTION</button><br>
-        <button type="button" class="location-row" onclick="alert('MODIFY PROMO')">MODIFY PROMO</button><br>
-        <button type="button" class="location-row" onclick="alert('STATISTIC')">STATISTIC</button><br>
-    </div>
-    </div>
     <div class="footer">
         <div class="footer-text">Powered by</div>
         <div class="footer-image">
