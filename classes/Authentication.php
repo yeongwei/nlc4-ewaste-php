@@ -6,7 +6,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_FOLDER . "classes/Facebook2.php
 class Authentication extends Facebook2 {
 
     private static $defaultLoginUri = "/login.php";
-    private static $redirectUri = "/login_redirect.php";
+    private static $redirectUri = "/login_redirect.php?close";
     // private static $redirectUri = "http://www.google.com";
 
     public function __construct($redirectToLogin = true) {

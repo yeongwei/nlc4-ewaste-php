@@ -61,7 +61,9 @@ class Facebook2 {
     }
 
     private function getAccessToken() {
-        return $this->fbRedirectLoginHelper->getAccessToken();
+        $accessToken = $this->fbRedirectLoginHelper->getAccessToken();
+        echo $accessToken . "<br>";
+        return $accessToken;
     }
 
     private function getAccessTokenMetaData() {
