@@ -79,9 +79,9 @@
     </div>
     <div class="footer">
         <div class="footer-text">Powered by</div>
-            <div class="footer-image">
-                <img class="" src="<?php echo BASE_URL; ?>images/logo1.png"/>
-            </div>
+        <div class="footer-image">
+            <a href="<?php echo BASE_URL; ?>index.php"><img class="" src="<?php echo BASE_URL; ?>images/logo1.png"/></a>
+        </div>
     </div>
 </body>
 </html>
