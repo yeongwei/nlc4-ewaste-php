@@ -41,8 +41,10 @@ The prototyped schema in JSON:
 ]
 ```
 
-##ewaste_user
+## DDL
+
 ```
+-- ewaste_user
 create table ewaste_user
 (
    _id int AUTO_INCREMENT,
@@ -66,8 +68,19 @@ create table ewaste_user
    primary key(_id)
 )
 
+-- ewaste_trx
+create table ewaste_trx
+(
+   _id int AUTO_INCREMENT, -- transaction
+   donor_id int,
+   volunteer_id int,
+   recycler_id int, -- updated when recyler requested
+   weight double,
+   trx_date timestamp, 
+   status varchar(255), --A: available, R: Requested , C: Collected
+   primary key(_id) 
+)
 ```
-
 # API
 
 API calls to Watson AlchemyData News to drive data in Awareness page
