@@ -3,7 +3,7 @@
  */
 
 @media (min-width: 1px) {
-    body, html { background-color: #3b4b54; }
+    body, html { background-color: #92D050; }
 }
 @media (min-width: 480px) {}
 @media (min-width: 768px) {
@@ -39,3 +39,4 @@
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+}
