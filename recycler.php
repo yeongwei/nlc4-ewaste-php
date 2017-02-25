@@ -13,7 +13,10 @@
     <img src="images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
     <h2 class="title">Welcome<br><span id="recyclertitle"></span></h2>
     <div class="welcome">
-        <button type="button" onclick="alert('COLLECTION')">COLLECTION</button><br>
+<?php
+$_id = $_GET['_id'];
+echo '<button type="button" onclick="location.href=\'recycler-merchant-status.php?_id=' . $_id . '\'">COLLECTION</button><br>'
+?>	    
         <button type="button" onclick="alert('STATISTICS')">STATISTICS</button><br>
         <button type="button" onclick="alert('HISTORY')">HISTORY</button><br>
         <button type="button" onclick="alert('WEIGHT CHECK')">WEIGHT CHECK</button><br>

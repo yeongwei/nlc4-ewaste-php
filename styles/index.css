@@ -1,6 +1,7 @@
 @media (min-width: 1px) {
     body, html { background-color: #92D050; }
     .main-container{ position: relative; width: 100%; overflow: hidden; }
+    .title-desc { color: black;}
     .splash-container { position: relative; overflow: hidden; }
     .splash-image { position: relative; overflow: hidden; }
     .splash-details { position: absolute; top: 10px; left: 10px; }
@@ -9,10 +10,10 @@
     .navigation-container { position: relative; overflow: hidden; text-align: center; }
     .naivgation-list { position: relative; overflow: hidden; }
     .navigation-header { position: relative; overflow: hidden; font-weight: bolder; font-size: 20px; padding-top: 15px; padding-bottom: 15px; background-color: #31859c; }
-    .navigation-option { position: relative; overflow: hidden; padding-top: 8px; padding-bottom: 12px; display: none; background-color: #fac090; }
+    .navigation-option { position: relative; overflow: hidden; padding-top: 8px; padding-bottom: 12px; display: none; background-color: #fac090; color: black;}
     .navigation-option a { font-size: 14px; color: #ffffff; }
     .footer { position: absolute; overflow: hidden; width: 100%; bottom: 0px; left: 0px; text-align: center; }
-    .footer-text { position: relative; overflow: hidden; font-size: 10px; }
+    .footer-text { position: relative; overflow: hidden; font-size: 10px; color: black;}
     .footer-image { position: relative; }
     .footer-image img { height: 40px; }
 }
