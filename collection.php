@@ -8,8 +8,9 @@
 <head>
     <?php include("views/common.php"); ?>
 
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/donor.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/style.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/collection.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/index.css" />
     <link rel="shortcut icon" type="image/png" href="images/persistent-favicon.png"/>
     <title>eWaste Management App</title>
 </head>
@@ -19,6 +20,8 @@
         <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
     </div>
     <div class="title-desc">Merchant Weight Status</div>
+    <br>
+    <div class="collection">
     <h3>Collection Status</h3>
     <hr>
     <table class="collection-status">
@@ -76,6 +79,7 @@
             </td>
         </tr>
     </table>
+    </div>
     </div>
     <div class="footer">
         <div class="footer-text">Powered by</div>

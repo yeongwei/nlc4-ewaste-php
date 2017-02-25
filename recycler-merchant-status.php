@@ -69,7 +69,7 @@ $mysqli->close ();
 $_id = $_GET['_id'];
 echo '<input type="hidden" name="_id" id="_id" value="' . $_id . '">'
 ?>            
-        <!--<input type="submit" value="Submit" class="blue-right-btn">  -->
+        <input type="submit" value="Submit" class="blue-right-btn">
     </form>
     <hr>
     <br>

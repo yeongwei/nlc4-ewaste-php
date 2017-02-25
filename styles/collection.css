@@ -1,0 +1,20 @@
+@media (min-width: 1px) {
+    body, html { background-color: #92D050; }
+    .main-container { position: relative; width: 100%; overflow: hidden; }
+    .header-image { position: relative; width: 100%; overflow: hidden; }
+    .header-image img { position: relative; width: 100%; height: 40px; }
+    .title-desc { position: relative; oveflow: hidden; text-align: center; font-weight: bolder; font-size: 28px; margin-bottom: 5px; 
+     background-color: #ffffff; color: #92d050; }
+    .collection { position: relative; overflow: hidden; color: black; background-color: white;}
+    /*.location-row { position: relative; overflow: hidden; font-weight: bolder; font-size: 22px; color: #ffffff; text-align: center;
+        padding: 10px; border-bottom: 1px solid #31859c; display: block; width: 80%; margin: auto; background-color: #31859c;}*/
+    /* .location-row:first-child { border-top: 1px solid #ffffff; } */
+    .footer { position: absolute; overflow: hidden; width: 100%; bottom: 0px; left: 0px; text-align: center; }
+    .footer-text { position: relative; overflow: hidden; font-size: 10px; }
+    .footer-image { position: relative; }
+    .footer-image img { height: 40px; }
+}
+@media (min-width: 480px) {}
+@media (min-width: 768px) { body, html { background-color: #92D050; } }
+@media (min-width: 1280px) { body, html { background-color: #185e12; } }
+@media (min-width: 1440px) {}
