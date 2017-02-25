@@ -13,7 +13,9 @@ $(function() {
             $(this).addClass("show");
             $(this).parent().find(".navigation-option").css("display", "block");
         }
-    })
+    });
+
+    console.log($(".navigation-option:last-child").length);
 })
 
 function resizeMainContainer() {
