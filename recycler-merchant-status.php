@@ -85,14 +85,15 @@ if ($mysqli->connect_error) {
     die ( "Connection failed: " . $mysqli->connect_error );
 }
 $city = $_GET['city'];
-// To update insert query from form
-$sql = "select usr.company as company, company_desc, image_path, sum_weight, sum_weight/50 * 100 as percent_full, volunteer_id
+
+$sql= "select usr.company as company, company_desc, image_path, sum_weight, sum_weight/50 * 100 as percent_full, volunteer_id, status
 from 
-   (select volunteer_id, sum(weight) sum_weight from ewaste_trx 
+   (select volunteer_id, status, sum(weight) sum_weight from ewaste_trx 
     where ((status = 'available') OR (status='requested' and recycler_id = " . $_id .")) 
-    group by volunteer_id) trx, ewaste_user usr
+    group by volunteer_id, status) trx, ewaste_user usr
 where trx.volunteer_id = usr._id
-and usr.city = '" . $city . "'";
+and usr.city =  '" . $city . "'";
+
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
@@ -109,7 +110,10 @@ if ($result->num_rows > 0) {
         echo $row['percent_full'];
         echo '    </td>';
         echo '    <td>';
-        echo '        <a href="/update_collection.php?volunteer_id=' .$row['volunteer_id']. '&recycler_id=' . $_id . '">collect</a>';
+        if ($row['status'] == 'available')
+        	echo '        <a href="/update_collection.php?volunteer_id=' .$row['volunteer_id']. '&recycler_id=' . $_id . '&city=' . $city. '">collect</a>';
+        else
+        	echo $row['status'];
         echo '    </td>';
         echo '</tr>';
     }

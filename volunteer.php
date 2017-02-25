@@ -16,11 +16,12 @@
     <title>eWaste Management App</title>
 </head>
 <body>
-    <header>
-        <img src="images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
-        <h3 class="title">Welcome<br><span id="volunteertitle"></span></h3>
-    </header>
-    <div class="welcome">
+    <div class="main-container">
+    <div class="header-image">
+        <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
+    </div>
+    <div class="title-desc">Welcome Merchant</div>
+    <div class="welcome-merchant">
     
 <?php
 $_id = $_GET['_id'];
@@ -30,12 +31,12 @@ echo '<button type="button" onclick="location.href=\'volunteer-transaction.php?_
         <button type="button" onclick="alert('STATISTIC')">STATISTIC</button><br>
         <button type="button" onclick="alert('COLLECTION')">COLLECTION</button><br>
     </div>
-    <footer class="footer">
-        <p style="color: black;">
-            <em>Powered by</em>
-        </p>
-        <img src="images/logo1.png" alt="logo"
-            style="width: 80px; height: 40px;">
-    </footer>  
+    </div>
+    <div class="footer">
+        <div class="footer-text">Powered by</div>
+        <div class="footer-image">
+            <a href="<?php echo BASE_URL; ?>index.php"><img class="" src="<?php echo BASE_URL; ?>images/logo1.png"/></a>
+        </div>
+    </div>
 </body>
 </html>
