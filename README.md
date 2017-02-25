@@ -41,6 +41,33 @@ The prototyped schema in JSON:
 ]
 ```
 
+##ewaste_user
+```
+create table ewaste_user
+(
+   _id int AUTO_INCREMENT,
+   _index int,
+   guid varchar(255),
+   isactive boolean,
+   age int,
+   gender varchar(255),
+   name varchar(255),
+   company varchar(255),
+   _role varchar(255),
+   email varchar(255),
+   phone varchar(255),
+   address varchar(255),
+   city varchar(255),
+   postcode int,
+   state varchar(255),
+   registered timestamp,
+   latitude varchar(255),
+   longitude varchar(255),
+   primary key(_id)
+)
+
+```
+
 # API
 
 API calls to Watson AlchemyData News to drive data in Awareness page
