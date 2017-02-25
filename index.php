@@ -30,11 +30,11 @@
         <div class="navigation-container">
             <div class="naivgation-list">
                 <div class="navigation-header">FIND US</div>
-                <div class="navigation-option"><a href="#">MERCHANT LOCATOR</a></div>
+                <div class="navigation-option"><a href="<?php echo BASE_URL; ?>donor.php">MERCHANT LOCATOR</a></div>
             </div>
             <div class="naivgation-list">
                 <div class="navigation-header">PARTNER WITH US</div>
-                <div class="navigation-option"><a href="#">REGISTRATION</a></div>
+                <div class="navigation-option"><a href="<?php echo BASE_URL; ?>registration.php">REGISTRATION</a></div>
                 <div class="navigation-option"><a href="#">PARTNER LOGIN</a></div>
             </div>
         </div>
