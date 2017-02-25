@@ -1,64 +1,49 @@
 <?php
-    include("classes/Helper.php");
+    include("config.php");
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script type="text/javascript" src="scripts/jq/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="scripts/script.js"></script>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/extend.css" />
-    <link rel="shortcut icon" type="image/png" href="images/persistent-favicon.png"/>
+    <?php include("views/common.php"); ?>
+
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/jq/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/index.js"></script>
+
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/style.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/index.css" />
+
     <title>eWaste Management App</title>
 </head>
 <body>
-    <div class="row">
-        <div class="col-6">
-            <img src="../../images/E-WasteTree.jpg" alt="E-WasteTree">
-            <p><strong>Our Mission</strong></p>
-            <p><i>Mission statement</i></p>
-            <p><strong>Our Goals</strong></p>
-            <p><i>Goals statement</i></p>
-        </div>
-        <div class="col-6">
-            <button class="accordion">FIND US</button>
-            <div class="panel">
-                <p style="color:black;"><a href="donor.php">MERCHANT LOCATOR</a></p>
+    <div class="main-container">
+        <div class="splash-container">
+            <img class="splash-image" 
+                src="<?php echo BASE_URL; ?>images/E-WasteTree.jpg" alt="E-WasteTree">
+            <div class="splash-details">
+                <div class="splash-details-title">Our Mission</div>
+                <div class="splash-details-desc">Mission statement of the Year!</div>
+                <div class="splash-details-title">Our Goals</div>
+                <div class="splash-details-desc">Goals of the Year!</div>
             </div>
-            <button class="accordion">PARTNER WITH US</button>
-            <div class="panel">
-                <p style="color:black;"><a href="registration.php">REGISTRATION</a></p>
-                <p style="color:black;">PARTNER LOGIN</p>
+        </div>
+        <div class="navigation-container">
+            <div class="naivgation-list">
+                <div class="navigation-header">FIND US</div>
+                <div class="navigation-option"><a href="#">MERCHANT LOCATOR</a></div>
+            </div>
+            <div class="naivgation-list">
+                <div class="navigation-header">PARTNER WITH US</div>
+                <div class="navigation-option"><a href="#">REGISTRATION</a></div>
+                <div class="navigation-option"><a href="#">PARTNER LOGIN</a></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-text">Powdered by</div>
+            <div class="footer-image">
+                <img class="" src="<?php echo BASE_URL; ?>images/logo1.png"/>
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].onclick = function(){
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
-
-            /* Toggle between hiding and showing the active panel */
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        }
-    }
-    </script>
-    <footer class="footer">
-        <p style="color: black;">
-            <em>Powered by</em>
-        </p>
-        <img src="images/logo1.png" alt="logo"
-            style="width: 80px; height: 40px;">
-    </footer>
 </body>
 </html>
