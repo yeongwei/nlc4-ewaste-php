@@ -48,7 +48,7 @@ class Facebook2 {
      */
     protected function handleRedirect() {
         if ($this->isTokenValid()) {
-            $this->getLongLivedAccessToken();
+            // $this->getLongLivedAccessToken();
             return true;
         } else return false;
     }
@@ -61,7 +61,9 @@ class Facebook2 {
     }
 
     private function getAccessToken() {
-        return $this->fbRedirectLoginHelper->getAccessToken();
+        $accessToken = $this->fbRedirectLoginHelper->getAccessToken();
+        echo $accessToken . "<br>";
+        return $accessToken;
     }
 
     private function getAccessTokenMetaData() {
