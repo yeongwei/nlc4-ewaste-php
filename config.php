@@ -14,7 +14,7 @@ if ($_SERVER["DOCUMENT_ROOT"] == $_developmentServerRootFolder) {
 } else {
     define("PROJECT_FOLDER", "/");
     define("DEVELOPMENT", false);
-    define("BASE_URL", "");
+    define("BASE_URL", "https://nlc4-ewaste-php.au-syd.mybluemix.net/");
 }
 
 date_default_timezone_set($_timezone);
