@@ -11,14 +11,14 @@ The prototyped schema in JSON:
   '{{repeat(2, 1)}}',
   {
     _id: '{{objectId()}}',
-    index: '{{index()}}',
+    _index: '{{index()}}',
     guid: '{{guid()}}',
     isActive: '{{bool()}}',
     age: '{{integer(20, 40)}}',
     gender: '{{gender()}}',
     name: '{{firstName()}} {{surname()}}',
     company: '{{company().toUpperCase()}}',
-    role: function (tags) {
+    _role: function (tags) {
       var _role = ['user', 'collector', 'regulator', 'admin'];
       return _role[tags.integer(0, _role.length - 1)];
     },
