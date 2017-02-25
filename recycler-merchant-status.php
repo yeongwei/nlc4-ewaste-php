@@ -26,7 +26,7 @@
         <div id="label_input">  
             <label for="city">City</label> 
             <select name="city" id="city">
-            <input type="submit" value="Submit" class="blue-right-btn">
+            
 <?php
 // Read MySQL credentials from VCAP services and formatting
 $vcap_services = json_decode ( $_ENV ["VCAP_SERVICES"] );
@@ -55,7 +55,12 @@ if ($result->num_rows > 0) {
 $mysqli->close ();
 ?>            
             </select>
-        </div>
+        </div>            
+<?php
+$_id = $_GET['_id'];
+echo '<input type="hidden" name="_id" id="_id" value=" ' . $_id . '">'
+?>            
+        <input type="submit" value="Submit" class="blue-right-btn">
     </form>
     <hr>
     <br>
