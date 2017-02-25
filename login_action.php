@@ -26,6 +26,8 @@ if ($result->num_rows > 0) {
 	}
 }
 
+$mysqli->close ();
+
 if($role == "donor")
 	header("Location: /donor.php");
 elseif($role == "recycler")
@@ -35,7 +37,5 @@ elseif($role == "volunteer")
 else
 	header("Location: /partnerlogin.php?error=true");
 	
-$mysqli->close ();
 
-header("Location: /volunteer-transaction.php");
 ?>
