@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Title of the document</title>
+        <title>E-waste Analytics</title>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
     </head>
- 
+
     <?php
         $dataPoints = array(
-            array("y" => 6, "label" => "Apple"),
-            array("y" => 4, "label" => "Mango"),
-            array("y" => 5, "label" => "Orange"),
-            array("y" => 7, "label" => "Banana"),
-            array("y" => 4, "label" => "Pineapple"),
-            array("y" => 6, "label" => "Pears"),
-            array("y" => 7, "label" => "Grapes"),
-            array("y" => 5, "label" => "Lychee"),
-            array("y" => 4, "label" => "Jackfruit")
+            array("y" => 3, "label" => "Today"),
+            array("y" => 1, "label" => "25-Feb-2017"),
+            array("y" => 2, "label" => "24-Feb-2017"),
+            array("y" => 1, "label" => "23-Feb-2017"),
+            array("y" => 2, "label" => "22-Feb-2017"),
+            array("y" => 3, "label" => "21-Feb-2017"),
+            array("y" => 4, "label" => "20-Feb-2017"),
+            array("y" => 0, "label" => "19-Feb-2017")
         );
     ?>
- 
+
     <body>
         <div id="chartContainer"></div>
- 
+
         <script type="text/javascript">
- 
+
             $(function () {
                 var chart = new CanvasJS.Chart("chartContainer", {
                     theme: "theme2",
                     animationEnabled: true,
                     title: {
-                        text: "Basic Column Chart using CanvasJS"
+                        text: "Feeds about e-waste"
                     },
                     data: [
                     {
-                        type: "column",                
+                        type: "column",
                         dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
                     }
                     ]
@@ -43,5 +42,5 @@
             });
         </script>
     </body>
- 
+
 </html>
