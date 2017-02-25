@@ -15,7 +15,11 @@
         <h3 class="title">Welcome<br><span id="volunteertitle"></span></h3>
     </header>
     <div class="welcome">
-        <button type="button" onclick="alert('TRANSACTION')">TRANSACTION</button><br>
+    
+<?php
+$_id = $_GET['_id'];
+echo '<button type="button" onclick="location.href=\'volunteer-transaction.php?_id=' . $_id . '\'">TRANSACTION</button><br>'
+?>	
         <button type="button" onclick="alert('MODIFY PROMO')">MODIFY PROMO</button><br>
         <button type="button" onclick="alert('STATISTIC')">STATISTIC</button><br>
         <button type="button" onclick="alert('COLLECTION')">COLLECTION</button><br>
