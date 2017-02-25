@@ -80,6 +80,18 @@ create table ewaste_trx
    status varchar(255), --A: available, R: Requested , C: Collected
    primary key(_id) 
 )
+
+-- ewaste_promo
+create table ewaste_promo
+(
+   _id int AUTO_INCREMENT,
+   volunteer_id int, 
+   promotion_text varchar(255), 
+   start_date date,
+   expiry_date date, 
+   status boolean, 
+   primary key(_id) 
+)
 ```
 # API
 
