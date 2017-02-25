@@ -25,10 +25,10 @@
 <?php
 $_id = $_GET['_id'];
 echo '<button type="button" class="location-row" onclick="location.href=\'recycler-merchant-status.php?_id=' . $_id . '\'">COLLECTION</button><br>'
-?>	    
-        <button type="button" class="location-row" onclick="alert('STATISTICS')">STATISTICS</button><br>
+?>        
         <!-- history and collections is the same <button type="button" class="location-row" onclick="alert('HISTORY')">HISTORY</button><br>-->
         <button type="button" class="location-row" onclick="alert('WEIGHT CHECK')">WEIGHT CHECK</button><br>
+        <button type="button" class="location-row" onclick="alert('STATISTICS')">STATISTICS</button><br>
     </div>
     </div>
     <div class="footer">
