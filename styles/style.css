@@ -171,12 +171,12 @@ h3.desc {
     text-align: center
 }
 
-form#registration, form#addrecords, div#volunteer-status {
+form#registration, form#addrecords, div#volunteer-status div#merchant-status {
     color: black;
     background-color: white;
 }
 
-form#registration div#label_input label{
+div#label_input label{
     display: inline-block;
     float: left;
     clear: left;
@@ -184,7 +184,7 @@ form#registration div#label_input label{
     text-align: left;
 }
 
-form#registration div#label_input input {
+div#label_input input {
     display: inline-block;
     float: left;
 }
