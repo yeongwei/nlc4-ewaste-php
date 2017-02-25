@@ -53,7 +53,7 @@ $mysqli->close ();
     </form>
     <footer class="footer">
       <p style="color:black;"><em>Powered by</em></p>
-      <img src="images/logo1.png" alt="logo" style="width:80px;height:40px;">
+      <a href="index.php"><img src="images/logo1.png" alt="logo" style="width:80px;height:40px;"></a>
     </footer>
 </body>
 </html>
