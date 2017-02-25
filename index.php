@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/style.css" />
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/index.css" />
-
+    <link rel="shortcut icon" type="image/png" href="<?php echo BASE_URL; ?>images/persistent-favicon.png"/>
     <title>eWaste Management App</title>
 </head>
 <body>
@@ -39,9 +39,9 @@
             </div>
         </div>
         <div class="footer">
-            <div class="footer-text">Powdered by</div>
+            <div class="footer-text">Powered by</div>
             <div class="footer-image">
-                <img class="" src="<?php echo BASE_URL; ?>images/logo1.png"/>
+                <a href="index.php"><img class="" src="<?php echo BASE_URL; ?>images/logo1.png"/></a>
             </div>
         </div>
     </div>

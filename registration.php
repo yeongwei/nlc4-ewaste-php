@@ -43,7 +43,7 @@
             <h3>Contacts Details</h3>
             <hr>
             <label for="company">Company Name</label>
-            <input type="company" name="company" id="company">
+            <input type="text" name="company" id="company">
             <br>
             <label for="phone">Phone</label>
             <input type="text" name="phone" id="phone">

@@ -8,8 +8,8 @@
     .splash-details-desc { position: relative; overflow: hidden; font-style: italic; font-size: 10px; margin-bottom: 5px; }
     .navigation-container { position: relative; overflow: hidden; text-align: center; }
     .naivgation-list { position: relative; overflow: hidden; }
-    .navigation-header { position: relative; overflow: hidden; font-weight: bolder; font-size: 20px; padding-top: 15px; padding-bottom: 15px; }
-    .navigation-option { position: relative; overflow: hidden; padding-top: 8px; padding-bottom: 12px; display: none; }
+    .navigation-header { position: relative; overflow: hidden; font-weight: bolder; font-size: 20px; padding-top: 15px; padding-bottom: 15px; background-color: #31859c; }
+    .navigation-option { position: relative; overflow: hidden; padding-top: 8px; padding-bottom: 12px; display: none; background-color: #fac090; }
     .navigation-option a { font-size: 14px; color: #ffffff; }
     .footer { position: absolute; overflow: hidden; width: 100%; bottom: 0px; left: 0px; text-align: center; }
     .footer-text { position: relative; overflow: hidden; font-size: 10px; }

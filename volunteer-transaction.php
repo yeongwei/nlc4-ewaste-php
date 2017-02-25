@@ -18,6 +18,11 @@
         <h3>Add New Records</h3>
         <hr>
         <br>
+        
+<?php
+$_id = $_GET['_id'];
+echo '<input type="hidden" name="_id" id="_id" value=" ' . $_id . '">'
+?>
         <label for="weight">Enter weight of items (in kg)</label>
         <input type="text" name="weight" id="weight">
         <br>
@@ -38,7 +43,46 @@
         <tr>
             <th>Action</th><th>Record Number</th><th>Weight (kg)</th><th>Date of Transaction</th>
         </tr>
-        <tr>
+<?php
+$vcap_services = json_decode ( $_ENV ["VCAP_SERVICES"] );
+$db = $vcap_services->{"compose-for-mysql"} [0]->credentials;
+$temp = explode ( '@', $db->uri );
+$mysql_cred = explode ( ':', $temp [0] );
+$mysql_db = explode ( '/', $temp [1] );
+
+// Create DB connection
+$mysqli = new mysqli ( $mysql_db [0], ltrim ( $mysql_cred [1], "/" ), $mysql_cred [2], $mysql_db [1] );
+
+// Check DB connection
+if ($mysqli->connect_error) {
+	die ( "Connection failed: " . $mysqli->connect_error );
+}
+$sql = "select _id, weight, trx_date from ewaste_trx where volunteer_id=" . $_id;
+$result = $mysqli->query($sql);
+$donor_id = 0 ;
+
+
+if ($result->num_rows > 0) {
+	while($row = $result->fetch_assoc()) {
+		echo '<tr>';
+    	echo '<td>';
+        echo '<img src="images/edit_icon.png" alt="edit" style="width:10px;height:10px;">|';
+        echo '<img src="images/delete_icon.png" alt="edit" style="width:10px;height:10px;">';
+        echo '</td>';
+        echo '<td>';
+        echo $row["_id"];
+        echo '</td>';
+        echo '<td>';
+        echo $row["weight"];
+        echo '</td>';
+        echo '<td>';
+        echo $row["trx_date"];
+        echo '</td>';
+        echo '</tr>';
+	}
+}
+?>
+        <!-- tr>
             <td>
                 <img src="images/edit_icon.png" alt="edit" style="width:10px;height:10px;">|
                 <img src="images/delete_icon.png" alt="edit" style="width:10px;height:10px;">
@@ -82,7 +126,7 @@
             <td>
                 25/02/2017 11:00AM
             </td>
-        </tr>
+        </tr-->
         </table>
         <hr>
         <table class="volunteer-status">
