@@ -6,8 +6,8 @@
     .title-desc { position: relative; oveflow: hidden; text-align: center; font-weight: bolder; font-size: 28px; margin-bottom: 5px; 
      background-color: #ffffff; color: #92d050; }
     .volunteer-welcome { position: relative; overflow: hidden; }
-    .location-row { position: relative; overflow: hidden; font-weight: bolder; font-size: 22px; color: #31859c; text-align: center;
-        padding: 10px; border-bottom: 1px solid #ffffff; display: block; }
+    .location-row { position: relative; overflow: hidden; font-weight: bolder; font-size: 22px; color: #ffffff; text-align: center;
+        padding: 10px; border-bottom: 1px solid #31859c; display: block; width: 80%;}
     /* .location-row:first-child { border-top: 1px solid #ffffff; } */
     .footer { position: absolute; overflow: hidden; width: 100%; bottom: 0px; left: 0px; text-align: center; }
     .footer-text { position: relative; overflow: hidden; font-size: 10px; }
