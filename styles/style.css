@@ -59,10 +59,16 @@ h1 {
 
 table {
     table-layout: fixed;
+    border: 1px solid black;
     width: 800px;
     margin: 0 auto;
     word-wrap: break-word;
     padding-top:10%;
+}
+
+br.table {
+   display: block;
+   margin: 1px 0;
 }
 
 th {
@@ -71,6 +77,8 @@ th {
 
 th, td {
     text-align: left;
+    border: 1px solid black;    
+    width: auto;
     padding: 2px 20px;
 }
 
@@ -126,9 +134,25 @@ div.footer {
     transform: translate(-50%, -50%);
 }
 
+footer {
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
 h2.title {
     width: 100%;
     color: black;
+    background-color: white;
+    text-align: center
+}
+
+
+h3.desc {
+    width: 100%;
+    color: grey;
     background-color: white;
     text-align: center
 }
