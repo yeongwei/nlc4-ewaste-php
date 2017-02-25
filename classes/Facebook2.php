@@ -1,8 +1,7 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_FOLDER .
     "classes/facebook/php-graph-sdk-5.0.0/src/Facebook/autoload.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_FOLDER .
-    "nlc4-ewaste-php/classes/Helper.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_FOLDER . "classes/Helper.php";
 
 use Facebook\Facebook;
 
