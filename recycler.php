@@ -7,9 +7,6 @@
 <html>
 <head>
     <?php include("views/common.php"); ?>
-    
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/jq/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/index.js"></script>
 
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/style.css" />
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/index.css" />
