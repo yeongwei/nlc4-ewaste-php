@@ -1,19 +1,24 @@
+<?php
+    include("config.php");
+    include("classes/Helper.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script type="text/javascript" src="scripts/jq/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="scripts/script.js"></script>
+    <?php include("views/common.php"); ?>
+
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/extend.css" />
+    <link rel="stylesheet" href="styles/donor.css" />
     <link rel="shortcut icon" type="image/png" href="images/persistent-favicon.png"/>
     <title>eWaste Management App</title>
 </head>
 <body>
-    <header>
-        <img src="images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
-        <h3 class="title">Transaction</h3>
-    </header>
+    <div class="main-container">
+    <div class="header-image">
+        <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
+    </div>
+    <div class="title-desc">Transaction</div>
     <form action="/add_records.php" id="addrecords">
         <h3>Add New Records</h3>
         <hr>
@@ -137,12 +142,12 @@ if ($result->num_rows > 0) {
         </div>
         <br><button type="button" onclick="alert('View History')" class="blue-right-btn">View History</button><br>
     </div>
-    <footer class="footer">
-        <p style="color: black;">
-            <em>Powered by</em>
-        </p>
-        <img src="images/logo1.png" alt="logo"
-            style="width: 80px; height: 40px;">
-    </footer>
+    </div>
+    <div class="footer">
+        <div class="footer-text">Powered by</div>
+        <div class="footer-image">
+            <a href="<?php echo BASE_URL; ?>index.php"><img class="" src="<?php echo BASE_URL; ?>images/logo1.png"/></a>
+        </div>
+    </div>
 </body>
 </html>
