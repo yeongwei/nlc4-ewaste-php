@@ -13,21 +13,25 @@
     <title>eWaste Management App</title>
 </head>
 <body>
-    <img src="../../images/E-WasteTree.jpg" alt="E-WasteTree">
-    <div class="col-6">
-        <p><strong>Our Mission</strong></p>
-        <p><i>Mission statement</i></p>
-        <p><strong>Our Goals</strong></p>
-        <p><i>Goals statement</i></p>
-    </div>
-    <button class="accordion">FIND US</button>
-    <div class="panel">
-      <p style="color:black;">MERCHANT LOCATOR</p>
-    </div>
-    <button class="accordion">PARTNER WITH US</button>
-    <div class="panel">
-      <p style="color:black;">REGISTRATION</p>
-      <p style="color:black;">PARTNER LOGIN</p>
+    <div class="row">
+        <div class="col-6">
+            <img src="../../images/E-WasteTree.jpg" alt="E-WasteTree">
+            <p><strong>Our Mission</strong></p>
+            <p><i>Mission statement</i></p>
+            <p><strong>Our Goals</strong></p>
+            <p><i>Goals statement</i></p>
+        </div>
+        <div class="col-6">
+            <button class="accordion">FIND US</button>
+            <div class="panel">
+                <p style="color:black;">MERCHANT LOCATOR</p>
+            </div>
+            <button class="accordion">PARTNER WITH US</button>
+            <div class="panel">
+                <p style="color:black;">REGISTRATION</p>
+                <p style="color:black;">PARTNER LOGIN</p>
+            </div>
+        </div>
     </div>
     <script type="text/javascript">
     var acc = document.getElementsByClassName("accordion");
