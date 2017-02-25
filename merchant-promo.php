@@ -20,15 +20,15 @@
     // Check DB connection
     if ($mysqli->connect_error) die("Connection failed: " . $mysqli->connect_error );
     
-    $sql = "select 
-            promo.volunteer_id as volunteer_id, usr.company as company,
-            promo.promotion_text as promo_text, promo.start_date as start_date, promo.expiry_date as expiry_date,
-            usr.email as email, usr.phone as phone, usr.address as address, usr.city as city, usr.postcode as postcode,
-            usr.state as state, usr.latitude as latitude, usr.longitude as longitude
-            from ewaste_promo as promo join ewaste_user as usr on usr._id = promo.volunteer_id
-            where promo.volunteer_id = " . @$_GET["id"];
-    $result = $mysqli->query($sql);
-    $row = $result->fetch_assoc();
+    $sql1 = "select promo.volunteer_id as volunteer_id, promo.promotion_text as promo_text, promo.start_date as start_date, 
+            promo.expiry_date as expiry_date from ewaste_promo as promo where promo.volunteer_id = " . @$_GET["id"];
+    $result1 = $mysqli->query($sql1);
+
+    $sql2 = "select usr.email as email, usr.phone as phone, usr.address as address, usr.city as city, usr.postcode as postcode,
+            usr.state as state, usr.latitude as latitude, usr.longitude as longitude, usr.company as company
+             from ewaste_user usr where usr._id = " . @$_GET["id"];
+    $result2 = $mysqli->query($sql2);
+    $rows2 = $result2->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +39,7 @@
     <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/jq/jquery-3.1.1.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCkRI_Emw5Zc73676jS2K8ZUakThPaS2w"></script>
     <script type="text/javascript">
-        var destinationLatLng = "<?php echo $row["latitude"] ?>,<?php echo $row["longitude"] ?>"
+        var destinationLatLng = "<?php echo $rows2["latitude"] ?>,<?php echo $rows2["longitude"] ?>"
     </script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>scripts/merchant-promo.js"></script>
 
@@ -52,16 +52,23 @@
     <div class="main-container">
         <div class="header-image">
             <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
-            <div class="title-desc"><?php echo $row["company"]; ?></div>
+            <div class="title-desc"><?php echo $rows2["company"]; ?></div>
         </div>
     </div>
     <div class="promo-container">
-        <div class="promo-text"><?php echo $row["promo_text"]; ?></div>
-        <div class="promo-date">Start: <b><?php echo $row["start_date"]; ?></b> End: <b><?php echo $row["expiry_date"]; ?></b></div>
+    <?php
+    if ($result1->num_rows > 0) {
+        $row1 = $result1->fetch_assoc();
+    ?>
+        <div class="promo-text"><?php echo $row1["promo_text"]; ?></div>
+        <div class="promo-date">Start: <b><?php echo $row1["start_date"]; ?></b> End: <b><?php echo $row1["expiry_date"]; ?></b></div>
+    <?php
+    }
+    ?>
         <div class="promo-address">
-            <?php echo $row["address"]; ?>, <?php echo $row["city"]; ?>, <?php echo $row["postcode"]; ?>, <?php echo $row["state"]; ?>
+            <?php echo $rows2["address"]; ?>, <?php echo $rows2["city"]; ?>, <?php echo $rows2["postcode"]; ?>, <?php echo $rows2["state"]; ?>
         </div>
-        <div class="promo-contacts"><?php echo $row["phone"]; ?> / <?php echo $row["email"]; ?></div>
+        <div class="promo-contacts"><?php echo $rows2["phone"]; ?> / <?php echo $rows2["email"]; ?></div>
     </div>
     <div class="map-container">
         <div class="map-actual" id="map-actual"></div>
