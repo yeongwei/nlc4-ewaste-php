@@ -64,7 +64,7 @@ echo '<input type="hidden" name="_id" id="_id" value="' . $_id . '">'
     </form>
     <hr>
     <br>
-    <p>There are <span id="ttl-merchant">6</span> mechants ready for collection</p>
+    <!-- p>There are <span id="ttl-merchant">6</span> mechants ready for collection</p-->
     <hr>
     <table class="volunteer-status">
         <tr>
@@ -86,10 +86,10 @@ if ($mysqli->connect_error) {
 }
 $city = $_GET['city'];
 // To update insert query from form
-$sql = "select usr.company as company, company_desc, image_path, sum_weight, sum_weight/50 * 100 as percent_full
+$sql = "select usr.company as company, company_desc, image_path, sum_weight, sum_weight/50 * 100 as percent_full, volunteer_id
 from 
    (select volunteer_id, sum(weight) sum_weight from ewaste_trx 
-    where status = 'available'
+    where ((status = 'available') OR (status='requested' and recycler_id = " . $_id .")) 
     group by volunteer_id) trx, ewaste_user usr
 where trx.volunteer_id = usr._id
 and usr.city = '" . $city . "'";
@@ -109,7 +109,7 @@ if ($result->num_rows > 0) {
         echo $row['percent_full'];
         echo '    </td>';
         echo '    <td>';
-        echo '        collect';
+        echo '        <a href="/update_collection.php?volunteer_id=' .$row['volunteer_id']. '&recycler_id=' . $_id . '">collect</a>';
         echo '    </td>';
         echo '</tr>';
     }
