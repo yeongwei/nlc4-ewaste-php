@@ -21,7 +21,7 @@ The prototyped schema in JSON:
     name: '{{firstName()}} {{surname()}}',
     company: '{{company().toUpperCase()}}',
     _role: function (tags) {
-      var _role = ['user', 'collector', 'regulator', 'admin'];
+      var _role = ['donor', 'volunteer', 'recycler', 'admin'];
       return _role[tags.integer(0, _role.length - 1)];
     },
     email: '{{email()}}',
