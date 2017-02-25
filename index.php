@@ -35,7 +35,7 @@
             <div class="naivgation-list">
                 <div class="navigation-header">PARTNER WITH US</div>
                 <div class="navigation-option"><a href="<?php echo BASE_URL; ?>registration.php">REGISTRATION</a></div>
-                <div class="navigation-option"><a href="<?php echo BASE_URL;?>partnerlogin.php>">PARTNER LOGIN</a></div>
+                <div class="navigation-option"><a href="<?php echo BASE_URL; ?>partnerlogin.php">PARTNER LOGIN</a></div>
             </div>
         </div>
         <div class="footer">
