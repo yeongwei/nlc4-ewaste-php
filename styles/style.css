@@ -119,13 +119,33 @@ div.panel {
 }
 
 div.footer {
-  position: absolute;
-  bottom: 1px;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
-div.title {
-    
+h2.title {
+    width: 100%;
+    color: black;
+    background-color: white;
+    text-align: center
+}
+
+form#registration {
+    color: black;
+    background-color: white;
+}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: left;
+}
+input {
+  display: inline-block;
+  float: left;
 }
