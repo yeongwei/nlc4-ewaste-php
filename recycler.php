@@ -15,7 +15,7 @@
     <div class="welcome">
 <?php
 $_id = $_GET['_id'];
-echo '<button type="button" onclick="location.href=\'recycler-merchant-status?_id=' . $_id . '\'">COLLECTION</button><br>'
+echo '<button type="button" onclick="location.href=\'recycler-merchant-status.php?_id=' . $_id . '\'">COLLECTION</button><br>'
 ?>	    
         <button type="button" onclick="alert('STATISTICS')">STATISTICS</button><br>
         <button type="button" onclick="alert('HISTORY')">HISTORY</button><br>
