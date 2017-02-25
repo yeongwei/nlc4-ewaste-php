@@ -14,7 +14,7 @@
 </head>
 <body>
     <img src="../../images/E-WasteTree.jpg" alt="E-WasteTree">
-    <div class="statements">
+    <div class="col-6">
         <p><strong>Our Mission</strong></p>
         <p><i>Mission statement</i></p>
         <p><strong>Our Goals</strong></p>
