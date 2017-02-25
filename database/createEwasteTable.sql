@@ -18,6 +18,8 @@ create table ewaste_user
    registered timestamp,
    latitude varchar(255),
    longitude varchar(255),
+   image_path varchar(255), 
+   company_desc varchar(255)
    primary key(_id)
 )
 
