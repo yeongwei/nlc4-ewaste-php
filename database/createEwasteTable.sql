@@ -40,6 +40,6 @@ create table ewaste_promo
 	promotion_text varchar(255), 
 	start_date date,
 	expiry_date date, 
-	status boolean, 
+	status boolean, -- active , inactive
 	primary key(_id) 
 )

@@ -7,6 +7,8 @@ Making E-Waste recycling fun!
 The prototyped schema in JSON:
 
 ```
+// ewaste_user
+ 
 [
   '{{repeat(2, 1)}}',
   {
@@ -30,15 +32,42 @@ The prototyped schema in JSON:
     state: '{{state()}}',
     registered: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
     latitude: '{{floating(-90.000001, 90)}}',
-    longitude: '{{floating(-180.000001, 180)}}',
-    weight: '{{floating(0,100)}}',
-    isLocked: '{{bool()}}',
-    status: function (tags) {
-      var _status = ['in-progress', 'completed', 'confirmed'];
-      return _status[tags.integer(0, _status.length - 1)];
-    }
+    longitude: '{{floating(-180.000001, 180)}}'
   }
 ]
+
+//ewaste_trx
+ 
+[
+  '{{repeat(2, 1)}}',
+  {
+    _id: '{{objectId()}}',
+    donor_id: '{{index()}}',
+    volunteer_id: '{{index()}}',
+    recycler_id: '{{index()}}',
+    weight: '{{floating(0.5, 10)}}',
+    trx_date: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
+    status: function (tags) {
+      var _role = ['available', 'requested', 'collected'];
+      return _role[tags.integer(0, _role.length - 1)];
+    }
+  }
+]  
+
+// ewaste_promo
+[
+  '{{repeat(5, 1)}}',
+  {
+    _id: '{{objectId()}}',
+    volunteer_id: '{{index()}}',
+    promotion_text: '{{guid()}}',
+    start_date: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
+    expiry_date: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
+    status: '{{bool()}}'
+  }
+] 
+
+
 ```
 
 ## DDL
