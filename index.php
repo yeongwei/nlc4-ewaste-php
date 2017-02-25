@@ -24,11 +24,11 @@
         <div class="col-6">
             <button class="accordion">FIND US</button>
             <div class="panel">
-                <p style="color:black;">MERCHANT LOCATOR</p>
+                <p style="color:black;"><a href="donor.php">MERCHANT LOCATOR</a></p>
             </div>
             <button class="accordion">PARTNER WITH US</button>
             <div class="panel">
-                <p style="color:black;">REGISTRATION</p>
+                <p style="color:black;"><a href="registration.php">REGISTRATION</a></p>
                 <p style="color:black;">PARTNER LOGIN</p>
             </div>
         </div>

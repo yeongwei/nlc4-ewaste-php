@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="scripts/jq/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/extend.css" />
+    <link rel="shortcut icon" type="image/png" href="images/persistent-favicon.png"/>
+    <title>eWaste Management App</title>
+</head>
+<body>
+    <img src="images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
+    <h2 class="title">Registration Form</h2>
+    <form action="/action_page.php" id="registration">
+        <div id="label_input">
+            <h3>General</h3>
+            <hr>   
+            <label for="role">Role of Interest</label> 
+            <select name="role" id="role">
+                <option value="donor">Donor</option>
+                <option value="collector">Volunteer</option>
+                <option value="recycler">Recycler</option>
+            </select>
+            <br>
+            <label for="title">Title</label>
+            <select name="title" id="title">
+                <option value="mr">Mr.</option>
+                <option value="ms">Ms.</option>
+                <option value="datuk">Datuk</option>
+            </select>
+            <!--  <input type="text" name="title" id="title"> -->
+            <br>
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" id="firstname">
+            <br>
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" id="lastname">
+            <br>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" min="12" max="200">
+            <br>
+            <h3>Contacts Details</h3>
+            <hr>
+            <label for="company">Company Name</label>
+            <input type="company" name="company" id="company">
+            <br>
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" id="phone">
+            <br>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <br>
+            <label for="streetname">Street Name</label>
+            <input type="text" name="streetname" id="streetname">
+            <br>
+            <label for="city">City</label>
+            <input type="text" name="city" id="city">
+            <br>
+            <label for="postcode">Postcode</label>
+            <input type="text" name="postcode" id="postcode">
+            <br>
+            <label for="state">State</label>
+            <input type="text" name="state" id="state">
+            <br>
+        </div>
+        <br>
+        <input type="submit" id="submitBtn">
+    </form>
+    <div class="footer">
+      <p style="color:black;"><em>Powered by</em></p>
+      <img src="images/logo1.png" alt="logo" style="width:80px;height:40px;">
+    </div>
+</body>
+</html>
