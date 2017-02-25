@@ -30,7 +30,7 @@
         <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
     </div>
     <div class="title-desc">Merchant Weight Status</div>
-    <div id="merchant-status">
+    <div class="merchant-status">
     <form action="recycler-merchant-status.php" id="recycler-city">
         <div id="label_input">  
             <label for="city">City</label> 

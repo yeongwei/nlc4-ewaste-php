@@ -20,13 +20,14 @@
         <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
     </div>
     <div class="title-desc">Welcome Recycler</div>
+    <br>
     <div class="recycler-welcome">
 <?php
 $_id = $_GET['_id'];
 echo '<button type="button" class="location-row" onclick="location.href=\'recycler-merchant-status.php?_id=' . $_id . '\'">COLLECTION</button><br>'
 ?>	    
         <button type="button" class="location-row" onclick="alert('STATISTICS')">STATISTICS</button><br>
-        <button type="button" class="location-row" onclick="alert('HISTORY')">HISTORY</button><br>
+        <!-- history and collections is the same <button type="button" class="location-row" onclick="alert('HISTORY')">HISTORY</button><br>-->
         <button type="button" class="location-row" onclick="alert('WEIGHT CHECK')">WEIGHT CHECK</button><br>
     </div>
     </div>

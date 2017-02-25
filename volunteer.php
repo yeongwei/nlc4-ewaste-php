@@ -22,6 +22,7 @@
         <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
     </div>
     <div class="title-desc">Welcome Merchant</div>
+    <br>
     <div class="volunteer-welcome">
     
 <?php
