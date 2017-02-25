@@ -55,7 +55,7 @@
     </script>
     <div class="footer">
       <p style="color:black;"><em>Powered by</em></p>
-      <img src="../../images/logo1.png" alt="logo" style="width:80px;height:40px;">
+      <img src="images/logo1.png" alt="logo" style="width:80px;height:40px;">
     </div>
 </body>
 </html>
