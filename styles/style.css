@@ -118,14 +118,6 @@ div.panel {
     display: none;
 }
 
-div.footer {
-    position: absolute;
-    bottom: 1px;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-}
-
 h2.title {
     width: 100%;
     color: black;
@@ -133,7 +125,7 @@ h2.title {
     text-align: center
 }
 
-form#registration {
+form#registration, form#addrecords {
     color: black;
     background-color: white;
 }
