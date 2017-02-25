@@ -1,6 +1,5 @@
 <?php
-define("PROJECT_FOLDER", "/"); // TODO: Production would be / instead
-
+//
 require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_FOLDER . "classes/Helper.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_FOLDER . "classes/Facebook2.php";
 
