@@ -24,7 +24,7 @@ $_id = 0 ;
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 		$role = $row["_role"];
-		$id = $row["_id"];
+		$_id = $row["_id"];
 	}
 }
 
