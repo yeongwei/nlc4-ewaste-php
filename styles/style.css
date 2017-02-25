@@ -145,7 +145,17 @@ form#registration div#label_input label{
     width: 250px;
     text-align: left;
 }
+
 form#registration div#label_input input {
-  display: inline-block;
-  float: left;
+    display: inline-block;
+    float: left;
+}
+
+div.welcome button {
+    margin:auto;
+    display:block;
+    width: 250px;
+    background-color: #31859c;
+    text-align: center;
+    color: white;
 }
