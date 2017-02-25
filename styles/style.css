@@ -138,14 +138,14 @@ form#registration {
     background-color: white;
 }
 
-label{
+form#registration div#label_input label{
     display: inline-block;
     float: left;
     clear: left;
     width: 250px;
     text-align: left;
 }
-input {
+form#registration div#label_input input {
   display: inline-block;
   float: left;
 }
