@@ -35,9 +35,18 @@ values (8, 'Join Semicolon for free' , '2017-01-01 00:00:00', '2017-03-01 00:00:
 -- promo query
 -- ***********
 
-select * from ewaste_promo where status = true and start_date < current_timestamp() and current_timestamp() <= expiry_date
-
+select promotion_text , usr.company, company_desc, image_path
+from ewaste_promo promo, ewaste_user usr
+where status = true and start_date < current_timestamp() and current_timestamp() <= expiry_date
+and promo.volunteer_id = usr._id;
 
 -- ****************
 -- collector query
 -- ****************
+
+select usr.company, company_desc, image_path, sum_weight, sum_weight/50 * 100 as percent_full
+from -- full is 50 kg
+   (select volunteer_id, sum(weight) sum_weight from ewaste_trx 
+    where status = 'available'
+    group by volunteer_id) trx, ewaste_user usr
+where trx.volunteer_id = usr._id;
