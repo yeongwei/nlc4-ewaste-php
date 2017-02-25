@@ -9,6 +9,15 @@
     <link rel="shortcut icon" type="image/png" href="images/persistent-favicon.png"/>
     <title>eWaste Management App</title>
 </head>
+<body>
+    <img src="images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
+    <h2 class="title">Find Your Nearest Collection Point</h2>
+    <form action="volunteerListing.php" id="registration">
+        <div id="label_input">
+            <h3>Pick a City</h3>
+            <hr>   
+            <label for="city">City Selection</label> 
+            <select name="city" id="city">
 <?php
 // Read MySQL credentials from VCAP services and formatting
 $vcap_services = json_decode ( $_ENV ["VCAP_SERVICES"] );
@@ -31,26 +40,11 @@ $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo "city: " . $row["city"]. "<br>";
+        echo '<option value="' . $row['city']. '">' . $row['city']. '</option>';
     }
-} else {
-    echo "0 results";
 }
 $mysqli->close ();
 ?>
-<body>
-    <img src="images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
-    <h2 class="title">Find Your Nearest Collection Point</h2>
-    <form action="action_page.php" id="registration">
-        <div id="label_input">
-            <h3>Pick a City</h3>
-            <hr>   
-            <label for="city">City Selection</label> 
-            <select name="city" id="city">
-                <option value="donor">Kuala Lumpur</option>
-                <option value="collector">Penang</option>
-                <option value="recycler">Petaling Jaya</option>
-                <option value="recycler">Sunway</option>
             </select>
             <br>
         </div>
