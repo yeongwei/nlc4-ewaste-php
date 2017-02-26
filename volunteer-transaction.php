@@ -66,7 +66,7 @@
                     <div>Trx Date</div>
                 </div>
                 <?php
-                $sql = "select _id, weight, trx_date from ewaste_trx where status = 'available' and volunteer_id=" . $_id;
+                $sql = "select _id, weight, trx_date from ewaste_trx where status in( 'available', 'requested') and volunteer_id=" . $_id;
                 $result = $mysqli->query($sql);
                 $donor_id = 0 ;
             
