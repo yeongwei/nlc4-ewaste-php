@@ -22,7 +22,7 @@
                 src="<?php echo BASE_URL; ?>images/E-WasteTree.jpg" alt="E-WasteTree"></a>
             <div class="splash-details">
                 <div class="splash-details-title">Our Mission</div>
-                <div class="splash-details-desc">To create awareness &amp; a safe, easy &amp; rewarding way for e-waster disposal.</div>
+                <div class="splash-details-desc">To create awareness &amp; a safe, easy &amp; rewarding way for e-waste disposal.</div>
             </div>
         </div>
         <div class="navigation-container">
@@ -39,6 +39,7 @@
                 <div class="navigation-header">ANALYTICS</div>
                 <div class="navigation-option"><a href="<?php echo BASE_URL; ?>awareness.php">AWARENESS</a></div>
                 <div class="navigation-option"><a href="<?php echo BASE_URL; ?>sentiments.php">SENTIMENTS</a></div>
+                <div class="navigation-option"><a href="<?php echo BASE_URL; ?>achievement.php">ACHIEVEMENT</a></div>
             </div>
         </div>
         <div class="footer">

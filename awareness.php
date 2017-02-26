@@ -33,16 +33,16 @@
             <div class="header-image">
                 <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
             </div>
-            <div class="title-desc">Awareness</div>
+            <div class="title-desc" style="font-size:500%">Awareness</div>
         </div>
-        <div id="chartContainer" width=100 height=100></div>
+        <div id="chartContainer" style="position: relative; overflow: hidden; width: 100%; height: 750px"></div>
         <script type="text/javascript">
              $(function () {
                  var chart = new CanvasJS.Chart("chartContainer", {
                      theme: "theme2",
                      animationEnabled: true,
                      title: {
-                         text: "Feeds about e-waste"
+                         text: "Trending news of e-Waste"
                      },
                      data: [
                      {
@@ -52,7 +52,13 @@
                  });
                  chart.render();
              });          
-         </script>             
+         </script>
+         <div class="location-list">
+             <a href="http://indiatoday.intoday.in/story/retrospective-execution-of-e-waste-rule-to-throttle-growthica/1/890922.html" class="location-row" style="font-size:300%">Retrospective execution of e-waste rule to throttle growth: ICA</a>
+             <a href="https://www.reddit.com/r/Documentaries/comments/5vw009/toxicity_life_at_agbobloshie_the_worlds_largest/" class="location-row" style="font-size:200%">ToxiCity: Life at Agbobloshie, the world's largest e-waste dump in Ghana (2016) • r/Documentaries</a>
+             <a href="http://economictimes.indiatimes.com/news/environment/pollution/turning-e-waste-to-electricity-iit-madras-innovation-waits-for-takers/articleshow/57334316.cms" class="location-row" style="font-size:300%">Turning e-waste to electricity: IIT Madras innovation waits for takers</a>
+             <a href="http://indianexpress.com/article/india/ngt-orders-inspection-of-power-firms-storing-hazardous-e-waste-4541728/" class="location-row" style="font-size:300%">NGT orders inspection of power firms storing hazardous e-waste</a>
+         </div>            
     <div class="footer">
         <div class="footer-text">Powered by</div>
         <div class="footer-image">
