@@ -32,8 +32,7 @@
             </div>
             <div class="title-desc">Sentiments</div>
         </div>    
-        <div id="chartContainer"></div>
-
+        <div id="chartContainer" style="position: relative; overflow: hidden; width: 100%; height: 350px"></div>
         <script type="text/javascript">
 
             $(function () {
@@ -41,7 +40,7 @@
                     theme: "theme2",
                     animationEnabled: true,
                     title: {
-                        text: "Twitters from e-Waste"
+                        text: "e-Cycle feed from Twitters"
                     },
                     data: [
                     {

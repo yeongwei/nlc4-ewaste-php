@@ -22,7 +22,7 @@
                 src="<?php echo BASE_URL; ?>images/E-WasteTree.jpg" alt="E-WasteTree"></a>
             <div class="splash-details">
                 <div class="splash-details-title">Our Mission</div>
-                <div class="splash-details-desc">To create awareness &amp; a safe, easy &amp; rewarding way for e-waster disposal.</div>
+                <div class="splash-details-desc">To create awareness &amp; a safe, easy &amp; rewarding way for e-waste disposal.</div>
             </div>
         </div>
         <div class="navigation-container">
