@@ -30,9 +30,9 @@
             <div class="header-image">
                 <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
             </div>
-            <div class="title-desc">Sentiments</div>
+            <div class="title-desc" style="font-size:500%">Sentiments</div>
         </div>    
-        <div id="chartContainer" style="position: relative; overflow: hidden; width: 100%; height: 350px"></div>
+        <div id="chartContainer" style="position: relative; overflow: hidden; width: 100%; height: 750px"></div>
         <script type="text/javascript">
 
             $(function () {
