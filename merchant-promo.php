@@ -60,7 +60,7 @@
     if ($result1->num_rows > 0) {
         $row1 = $result1->fetch_assoc();
     ?>
-        <div class="promo-text"><?php echo $row1["promo_text"]; ?></div>
+        <div class="promo-text"><b>PROMO</b>: <?php echo $row1["promo_text"]; ?></div>
         <div class="promo-date">Start: <b><?php echo $row1["start_date"]; ?></b> End: <b><?php echo $row1["expiry_date"]; ?></b></div>
     <?php
     }
