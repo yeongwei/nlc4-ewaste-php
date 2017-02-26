@@ -35,6 +35,11 @@
                 <div class="navigation-option"><a href="<?php echo BASE_URL; ?>registration.php">REGISTRATION</a></div>
                 <div class="navigation-option"><a href="<?php echo BASE_URL; ?>partnerlogin.php">PARTNER LOGIN</a></div>
             </div>
+            <div class="naivgation-list">
+                <div class="navigation-header">ANALYTICS</div>
+                <div class="navigation-option"><a href="<?php echo BASE_URL; ?>awareness.php">AWARENESS</a></div>
+                <div class="navigation-option"><a href="<?php echo BASE_URL; ?>sentiments.php">SENTIMENTS</a></div>
+            </div>
         </div>
         <div class="footer">
             <div class="footer-text">Powered by</div>
