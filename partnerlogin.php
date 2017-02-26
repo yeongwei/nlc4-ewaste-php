@@ -28,7 +28,7 @@
         <?php
         ?>
         <form action="login_action.php" id="recycler-city">
-        <label class="email" for="email">Fill in you Email and Click Submit</label>
+        <label class="email" for="email">Fill in your Email and Click Submit</label>
         <div class="input-container">
             <input class="input" type="text" name="email" id="email">
         </div>
