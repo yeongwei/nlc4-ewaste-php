@@ -39,6 +39,7 @@
                 <div class="navigation-header">ANALYTICS</div>
                 <div class="navigation-option"><a href="<?php echo BASE_URL; ?>awareness.php">AWARENESS</a></div>
                 <div class="navigation-option"><a href="<?php echo BASE_URL; ?>sentiments.php">SENTIMENTS</a></div>
+                <div class="navigation-option"><a href="<?php echo BASE_URL; ?>achievement.php">ACHIEVEMENT</a></div>
             </div>
         </div>
         <div class="footer">
