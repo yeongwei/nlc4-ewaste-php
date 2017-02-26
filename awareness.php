@@ -35,7 +35,7 @@
             </div>
             <div class="title-desc">Awareness</div>
         </div>
-        <div id="chartContainer" width=100 height=100></div>
+        <div id="chartContainer" style="position: relative; overflow: hidden; width: 100%; height: 350px"></div>
         <script type="text/javascript">
              $(function () {
                  var chart = new CanvasJS.Chart("chartContainer", {
@@ -52,7 +52,12 @@
                  });
                  chart.render();
              });          
-         </script>             
+         </script>
+         <div class="location-list">
+             <a href="http://indiatoday.intoday.in/story/retrospective-execution-of-e-waste-rule-to-throttle-growthica/1/890922.html" class="location-row">Retrospective execution of e-waste rule to throttle growth: ICA</a>
+             <a href="https://www.reddit.com/r/Documentaries/comments/5vw009/toxicity_life_at_agbobloshie_the_worlds_largest/" class="location-row">ToxiCity: Life at Agbobloshie, the world's largest e-waste dump in Ghana (2016) • r/Documentaries</a>
+             <a href="http://economictimes.indiatimes.com/news/environment/pollution/turning-e-waste-to-electricity-iit-madras-innovation-waits-for-takers/articleshow/57334316.cms" class="location-row">Turning e-waste to electricity: IIT Madras innovation waits for takers</a>
+         </div>            
     <div class="footer">
         <div class="footer-text">Powered by</div>
         <div class="footer-image">
