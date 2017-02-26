@@ -1,13 +1,21 @@
 <?php
+include("config.php");
+include("classes/Helper.php");
 
-$vcap_services = json_decode ( $_ENV ["VCAP_SERVICES"] );
-$db = $vcap_services->{"compose-for-mysql"} [0]->credentials;
-$temp = explode ( '@', $db->uri );
-$mysql_cred = explode ( ':', $temp [0] );
-$mysql_db = explode ( '/', $temp [1] );
+$mysqli = null;
+if (Helper::isDevelopment()) {
+    $mysqli = @new mysqli("10.211.50.18", "root", "Root#123", "console", "3306");
+} else {
+    // Read MySQL credentials from VCAP services and formatting
+    $vcap_services = json_decode($_ENV ["VCAP_SERVICES"]);
+    $db = $vcap_services->{"compose-for-mysql"}[0]->credentials;
+    $temp = explode ("@", $db->uri);
+    $mysql_cred = explode (":", $temp [0]);
+    $mysql_db = explode ("/", $temp [1]);
 
-// Create DB connection
-$mysqli = new mysqli ( $mysql_db [0], ltrim ( $mysql_cred [1], "/" ), $mysql_cred [2], $mysql_db [1] );
+    // Create DB connection
+    $mysqli = new mysqli ($mysql_db[0], ltrim($mysql_cred [1], "/"), $mysql_cred[2], $mysql_db[1]);
+}
 
 // Check DB connection
 if ($mysqli->connect_error) {
@@ -29,5 +37,5 @@ if ($mysqli->query($sql) === TRUE) {
 
 $mysqli->close ();
 
-header("Location: /recycler-merchant-status.php?_id=" . $recycler_id . "&city=" . $city);
+header("Location: " . BASE_URL . "recycler-merchant-status.php?_id=" . $recycler_id . "&city=" . $city);
 ?>
