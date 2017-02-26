@@ -42,13 +42,15 @@ $mysqli = new mysqli ( $mysql_db [0], ltrim ( $mysql_cred [1], "/" ), $mysql_cre
 if ($mysqli->connect_error) {
 	die ( "Connection failed: " . $mysqli->connect_error );
 }
+
+$_id = @$_GET["_id"];
+
 $sql = "select weight, trx_date, status, company from ewaste_trx trx 
         left outer join ewaste_user usr
         on trx.recycler_id = usr._id
         where volunteer_id=" . $_id;
 
 $result = $mysqli->query($sql);
-$donor_id = 0 ;
 
 
 if ($result->num_rows > 0) {
@@ -77,7 +79,7 @@ if ($result->num_rows > 0) {
     
     <h3>Collection Request</h3>
     <hr>
-    <table class="collection-request">
+    <table class="collection-status">
         <tr>
             <th>Recycler Company</th><th>Weight (kg)</th><th>Status</th><th>Action</th>
         </tr>
