@@ -6,11 +6,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="scripts/canvas/canvasjs.min.js"></script>
-        <script type="text/javascript" src="scripts/jq/jquery-3.1.1.js"></script>
-        <script type="text/javascript" src="scripts/script.js"></script>
+        <?php include("views/common.php"); ?>
+
         <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/style.css" />
-        <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/donor.css" />
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/achievement.css" />
         <link rel="shortcut icon" type="image/png" href="images/persistent-favicon.png"/>
         <title>e-Cycle</title>
     </head>
@@ -24,15 +23,20 @@
         </div>
      
 <?php
-// Read MySQL credentials from VCAP services and formatting
-$vcap_services = json_decode ( $_ENV ["VCAP_SERVICES"] );
-$db = $vcap_services->{"compose-for-mysql"} [0]->credentials;
-$temp = explode ( '@', $db->uri );
-$mysql_cred = explode ( ':', $temp [0] );
-$mysql_db = explode ( '/', $temp [1] );
+$mysqli = null;
+if (Helper::isDevelopment()) {
+    $mysqli = @new mysqli("10.211.50.18", "root", "Root#123", "console", "3306");
+} else {
+    // Read MySQL credentials from VCAP services and formatting
+    $vcap_services = json_decode($_ENV ["VCAP_SERVICES"]);
+    $db = $vcap_services->{"compose-for-mysql"}[0]->credentials;
+    $temp = explode ("@", $db->uri);
+    $mysql_cred = explode (":", $temp [0]);
+    $mysql_db = explode ("/", $temp [1]);
 
-// Create DB connection
-$mysqli = new mysqli ( $mysql_db [0], ltrim ( $mysql_cred [1], "/" ), $mysql_cred [2], $mysql_db [1] );
+    // Create DB connection
+    $mysqli = new mysqli ($mysql_db[0], ltrim($mysql_cred [1], "/"), $mysql_cred[2], $mysql_db[1]);
+}
 
 // Check DB connection
 if ($mysqli->connect_error) {
