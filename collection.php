@@ -48,7 +48,7 @@ $_id = @$_GET["_id"];
 $sql = "select weight, trx_date, status, company from ewaste_trx trx 
         left outer join ewaste_user usr
         on trx.recycler_id = usr._id
-        where statis in ('available', 'requested') and volunteer_id=" . $_id;
+        where status in ('available', 'requested') and volunteer_id=" . $_id;
 
 $result = $mysqli->query($sql);
 
