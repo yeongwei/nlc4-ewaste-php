@@ -22,7 +22,7 @@
     <div class="title-desc">Merchant Weight Status</div>
     <br>
     <div class="collection">
-    <h3>Collection Status</h3>
+    <h3>Current Collection Status</h3>
     <hr>
     <table class="collection-status">
         <tr>
@@ -77,7 +77,7 @@ if ($result->num_rows > 0) {
     <br>
     
     
-    <h3>Collection Request</h3>
+    <h3>Recycler Collection Request</h3>
     <hr>
     <table class="collection-status">
         <tr>
@@ -107,7 +107,7 @@ if ($result->num_rows > 0) {
       echo $row["status"];
       echo '      </td>';
       echo '      <td>';
-	  if ($row["status"] == 'available')	
+	  if ($row["status"] == 'requested')	
       	echo '        <a href="/transfer_collection.php?volunteer_id=' .$_id. '&recycler_id=' . $row["recycler_id"] .'">transfer</a>'; 
 	  else 
 	  	echo ' ';
