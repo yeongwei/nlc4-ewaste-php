@@ -43,7 +43,7 @@
     <div class="title-desc">Welcome <?php echo $rows["company"]; ?></div>
     <br>
     <div class="recycler-welcome">       
-        <a href="<?php echo BASE_URL; ?>collection.php" class="location-row">COLLECTION</a>
+        <!-- a href="collection.php" class="location-row">COLLECTION</a this is for volunteer-->
         <!-- history and collections is the same <a href="#" class="location-row">HISTORY</a>-->
         <a href="<?php echo BASE_URL; ?>recycler-merchant-status.php?_id=<?php echo @$_GET["_id"]; ?>" class="location-row">WEIGHT CHECK</a>
         <a href="#" class="location-row">STATISTICS</a>

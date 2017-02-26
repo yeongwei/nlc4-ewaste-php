@@ -46,7 +46,8 @@
     <br>
     <div class="volunteer-welcome">
         <a href="<?php echo BASE_URL; ?>volunteer-transaction.php?_id=<?php echo @$_GET["_id"]; ?>" class="location-row">TRANSACTION</a>
-        <a href="#" class="location-row">COLLECTION</a>
+		<a href="<?php echo BASE_URL; ?>collection.php?_id=<?php echo @$_GET["_id"]; ?>" class="location-row">COLLECTION</a>
+
         <a href="#" class="location-row">MODIFY PROMO</a>
         <a href="#" class="location-row">STATISTIC</a>
     </div>
