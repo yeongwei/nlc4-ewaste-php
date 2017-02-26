@@ -1,6 +1,35 @@
 <?php
     include("config.php");
     include("classes/Helper.php");
+
+    $mysqli = null;
+    if (Helper::isDevelopment()) {
+        $mysqli = @new mysqli("10.211.50.18", "root", "Root#123", "console", "3306");
+    } else {
+        // Read MySQL credentials from VCAP services and formatting
+        $vcap_services = json_decode($_ENV ["VCAP_SERVICES"]);
+        $db = $vcap_services->{"compose-for-mysql"}[0]->credentials;
+        $temp = explode ("@", $db->uri);
+        $mysql_cred = explode (":", $temp [0]);
+        $mysql_db = explode ("/", $temp [1]);
+
+        // Create DB connection
+        $mysqli = new mysqli ($mysql_db[0], ltrim($mysql_cred [1], "/"), $mysql_cred[2], $mysql_db[1]);
+    }
+
+
+    // Check DB connection
+    if ($mysqli->connect_error) {
+        die("Connection failed: " . $mysqli->connect_error);
+    }
+
+    $_id = @$_GET['_id'];
+
+    $sql = "select usr.email as email, usr.phone as phone, usr.address as address, usr.city as city, usr.postcode as postcode,
+            usr.state as state, usr.latitude as latitude, usr.longitude as longitude, usr.company as company
+             from ewaste_user usr where usr._id = " . $_id;
+    $result = $mysqli->query($sql);
+    $rows = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -8,140 +37,65 @@
 <head>
     <?php include("views/common.php"); ?>
 
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/donor.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/style.css" />
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>styles/volunteer-transaction.css" />
     <link rel="shortcut icon" type="image/png" href="images/persistent-favicon.png"/>
     <title>eWaste Management App</title>
 </head>
 <body>
     <div class="main-container">
-    <div class="header-image">
-        <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
-    </div>
-    <div class="title-desc">Transaction</div>
-    <form action="/add_records.php" id="addrecords">
-        <h3>Add New Records</h3>
-        <hr>
-        <br>
-        
-<?php
-$_id = $_GET['_id'];
-echo '<input type="hidden" name="_id" id="_id" value=" ' . $_id . '">'
-?>
-        <label for="weight">Enter weight of items (in kg)</label>
-        <input type="text" name="weight" id="weight">
-        <br>
-        <label for="weight">Donor Name ( leave null for anonymous)</label>
-        <input type="text" name="donor" id="donor">
-        <br>        
-        <input type="submit" value="Submit" class="blue-right-btn">
-        <br>
-    </form>
-    <br>
-    <div id="volunteer-status">
-        <h3>Current List</h3>
-        <hr>
-        <p><strong>Status: </strong><span id="volunteer-status">In-Progress</span></p>
-        <hr>
-        <div id="output">
-        <table class="volunteer-status">
-        <tr>
-            <th>Action</th><th>Record Number</th><th>Weight (kg)</th><th>Date of Transaction</th>
-        </tr>
-<?php
-$vcap_services = json_decode ( $_ENV ["VCAP_SERVICES"] );
-$db = $vcap_services->{"compose-for-mysql"} [0]->credentials;
-$temp = explode ( '@', $db->uri );
-$mysql_cred = explode ( ':', $temp [0] );
-$mysql_db = explode ( '/', $temp [1] );
-
-// Create DB connection
-$mysqli = new mysqli ( $mysql_db [0], ltrim ( $mysql_cred [1], "/" ), $mysql_cred [2], $mysql_db [1] );
-
-// Check DB connection
-if ($mysqli->connect_error) {
-	die ( "Connection failed: " . $mysqli->connect_error );
-}
-$sql = "select _id, weight, trx_date from ewaste_trx where status = 'available' and volunteer_id=" . $_id;
-$result = $mysqli->query($sql);
-$donor_id = 0 ;
-
-
-if ($result->num_rows > 0) {
-	while($row = $result->fetch_assoc()) {
-		echo '<tr>';
-    	echo '<td>';
-        echo '<img src="images/edit_icon.png" alt="edit" style="width:10px;height:10px;">|';
-        echo '<img src="images/delete_icon.png" alt="edit" style="width:10px;height:10px;">';
-        echo '</td>';
-        echo '<td>';
-        echo $row["_id"];
-        echo '</td>';
-        echo '<td>';
-        echo $row["weight"];
-        echo '</td>';
-        echo '<td>';
-        echo $row["trx_date"];
-        echo '</td>';
-        echo '</tr>';
-	}
-}
-?>
-        <!-- tr>
-            <td>
-                <img src="images/edit_icon.png" alt="edit" style="width:10px;height:10px;">|
-                <img src="images/delete_icon.png" alt="edit" style="width:10px;height:10px;">
-            </td>
-            <td>
-                KR-1
-            </td>
-            <td>
-                0.58
-            </td>
-            <td>
-                24/02/2017 12:00PM
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="images/edit_icon.png" alt="edit" style="width:10px;height:10px;">|
-                <img src="images/delete_icon.png" alt="edit" style="width:10px;height:10px;">
-            </td>
-            <td>
-                KR-2
-            </td>
-            <td>
-                0.25
-            </td>
-            <td>
-                24/02/2017 03:00PM
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="images/edit_icon.png" alt="edit" style="width:10px;height:10px;">|
-                <img src="images/delete_icon.png" alt="edit" style="width:10px;height:10px;">
-            </td>
-            <td>
-                KR-3
-            </td>
-            <td>
-                0.85
-            </td>
-            <td>
-                25/02/2017 11:00AM
-            </td>
-        </tr-->
-        </table>
-        <hr>
-        <table class="volunteer-status">
-            <tr>
-                <td><strong>Total Current Weight</strong></td><td><span id="transaction-ttl-weight" align="right">1.68kg</span></td>
-            </tr>
-        </table>
+        <div class="header-image">
+            <img src="<?php echo BASE_URL; ?>images/BackgoundEcoEnvcrop.jpg" alt="BackgoundEcoEnvcrop">
         </div>
-        <br><button type="button" onclick="alert('View History')" class="blue-right-btn">View History</button><br>
-    </div>
+        <div class="title-desc">Transaction for <?php echo $rows["company"]; ?></div>
+        <form class="form-add" action="<?php echo BASE_URL; ?>add_records.php" id="addrecords">
+            <h3>Add New Entries Below</h3>
+            <input type="hidden" name="_id" id="_id" value="<?php echo $_id; ?>"/>
+            <label for="weight">Enter weight of items (in kg)</label>
+            <input type="text" name="weight" id="weight">
+            <label for="weight">Donor Name ( leave null for anonymous)</label>
+            <input type="text" name="donor" id="donor"> 
+            <input type="submit" value="Submit" class="blue-right-btn">
+        </form>
+        <div id="volunteer-status">
+            <div id="output">
+                <div class="row">
+                    <div>Action</div>
+                    <div>ID</div>
+                    <div>Weight (kg)</div>
+                    <div>Trx Date</div>
+                </div>
+                <?php
+                $sql = "select _id, weight, trx_date from ewaste_trx where status = 'available' and volunteer_id=" . $_id;
+                $result = $mysqli->query($sql);
+                $donor_id = 0 ;
+            
+                $totalWeight = 0;
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        $totalWeight += $row["weight"];
+                ?>
+                <div class="row">
+                    <div style="text-align: center">
+                        <img src="<?php echo BASE_URL; ?>images/edit_icon.png" alt="edit" style="width:30px;height:30px;">;
+                        <!--  
+                        |<img src="<?php echo BASE_URL; ?>images/delete_icon.png" alt="edit" style="width:10px;height:10px;">';
+                         -->
+                    </div>
+                    <div><?php echo $row["_id"]; ?></div>
+                    <div><?php echo $row["weight"]; ?></div>
+                    <div><?php echo $row["trx_date"]; ?></div>
+                </div>
+                <?php
+                    }
+                }
+                ?>
+                <div class="row">
+                    <div class="summary-title">Total Weight</div>
+                    <div class="summary-value"><?php echo $totalWeight; ?></div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="footer">
         <div class="footer-text">Powered by</div>
