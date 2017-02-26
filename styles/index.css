@@ -1,6 +1,6 @@
 @media (min-width: 1px) {
     body, html { background-color: #92D050; }
-    .main-container{ position: relative; width: 100%; overflow: hidden; }
+    .main-container{ position: relative; width: 100%; overflow: hidden; height: auto; }
     .title-desc { color: black;}
     .splash-container { position: relative; overflow: hidden; }
     .splash-image { position: relative; overflow: hidden; }
@@ -18,7 +18,7 @@
     .navigation-option:last-child { border-bottom: none; }
     .navigation-option a { font-size: 14px; color: #ffffff; font-weight: bolder; }
 
-    .footer { position: absolute; overflow: hidden; width: 100%; bottom: 0px; left: 0px; text-align: center; }
+    .footer { position: relative; overflow: hidden; width: 100%; bottom: 0px; left: 0px; text-align: center; }
     .footer-text { position: relative; overflow: hidden; font-size: 10px; color: black;}
     .footer-image { position: relative; }
     .footer-image img { height: 40px; }

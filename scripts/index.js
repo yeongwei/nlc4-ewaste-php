@@ -2,7 +2,7 @@ $(function() {
     console.log("JQuery is runnning.");
     resizeSplashContainer();
     resizeSplashImage();
-    resizeMainContainer();
+    // resizeMainContainer();
 
     $(".navigation-header").click(function(){
         $(".navigation-option").css("display", "none");
